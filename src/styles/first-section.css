@@ -1,0 +1,27 @@
+.first--section {
+    padding-top: 130px;
+    height: 100vh;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    padding: 20px 20px 20px 100px;
+}
+
+.first--section--text {
+    width: 40%;
+    text-align: justify;
+    background: rgba(2, 19, 51, 0.7);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.first--section--text h2 {
+    font-weight: 800;
+    font-size: 3rem;
+    padding-bottom: 30px;
+}
+
+.first--section--text p {
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+}

@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bg-color1 {
+  background: url(./assets/world.jpg) no-repeat;
+  background-size: 100%;
+}
