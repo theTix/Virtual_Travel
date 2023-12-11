@@ -1,27 +1,84 @@
-.first--section {
-    padding-top: 130px;
-    height: 100vh;
+.first-section {
+    min-height: 100vh;
     color: var(--text-color);
     display: flex;
     align-items: center;
-    padding: 20px 20px 20px 100px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 0 40px;
 }
 
-.first--section--text {
-    width: 40%;
-    text-align: justify;
-    background: rgba(2, 19, 51, 0.7);
-    padding: 30px;
+.first-section--text, .first-section--box {
+    background: var(--container-background);
     border-radius: 20px;
 }
 
-.first--section--text h2 {
+.first-section--text {
+    width: 530px;
+    min-height: 500px;
+    text-align: justify;
+    margin-top: 50px;
+    padding: 30px;
+}
+
+.first-section--text h2 {
     font-weight: 800;
     font-size: 3rem;
     padding-bottom: 30px;
 }
 
-.first--section--text p {
+.first-section--text p {
     font-size: 1.2rem;
     padding-bottom: 20px;
+}
+
+.first-section--nav-containers {
+    width: 600px;
+    height: 500px;
+}
+
+.first-section--box {
+    margin: 20px 0;
+    padding: 15px;
+}
+
+.first-section--box:first-child, .first-section--box:last-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.first-section--box h1 {
+    font-size: 2.8rem;
+}
+
+.first-section--box p {
+    font-size: 2.6rem;
+}
+
+.first-section--box-icon-more {
+    font-size: 2rem;
+}
+
+.first-section--swiper-slide {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-section--swiper-slide h1 {
+    position: relative;
+    margin-right: 20px;
+}
+
+.first-section--swiper-slide h1::after {
+    content: "";
+    height: 100%;
+    width: 3px;
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    background: var(--text-color);
 }

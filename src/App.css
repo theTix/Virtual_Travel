@@ -1,10 +1,30 @@
+:root {
+  --text-color: white;
+  --text-color-hover: rgb(209, 209, 209);
+  --text-color-active: rgb(24, 86, 157);
+  --login-background: rgba(2, 44, 92, .7);
+  --login-background-full-opacity: rgba(2, 44, 92, 1);
+  --container-background: rgba(2, 19, 51, 0.9);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  overflow-x:hidden;
 }
 
 .bg-color1 {
   background: url(./assets/world.jpg) no-repeat;
-  background-size: 100%;
+  background-size: 100% 100%;
+}
+
+@media screen and (max-width: 1300px) {
+  .bg-color1 {
+    background-size: auto;
+  }
 }

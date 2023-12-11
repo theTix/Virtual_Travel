@@ -24,8 +24,20 @@ dist-ssr
 *.sln
 *.sw?
 
+#Vite temporary files
+.vite/
+
 # Vite build output
 build/
+
+#React icons build output
+icons/
+
+#Swiper build output
+swiper/dist/
+
+#Luxon build output
+luxon/build/
 
 # Cache directories
 .cache/
