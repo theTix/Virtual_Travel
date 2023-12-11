@@ -2,6 +2,9 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
+//react-router-dom
+import { NavLink } from 'react-router-dom';
+
 //icons
 import { FcBinoculars } from "react-icons/fc";
 import { TbArrowBadgeRightFilled } from "react-icons/tb";
@@ -43,10 +46,11 @@ const FirstSection = () => {
         </div>
 
         <div className="first-section--nav-containers">
-          <div className="first-section--box">
-            <p>Find out more about us &#128204;</p>
+          <NavLink className="first-section--box" to="about">
+            <p>&#128204; Find out more about us</p>
+            <div className="first-section--hover"></div>
             <TbArrowBadgeRightFilled className='first-section--box-icon-more' />
-          </div>
+          </NavLink>
           <div className="first-section--box">
             <Swiper
               modules={[Navigation, A11y]}
@@ -66,7 +70,7 @@ const FirstSection = () => {
             </Swiper>
           </div>
           <div className="first-section--box">
-            <p>Check out different cultures <FcBinoculars /> </p>
+            <p><FcBinoculars /> Check out different cultures</p>
             <TbArrowBadgeRightFilled className='first-section--box-icon-more' />
           </div>
         </div>

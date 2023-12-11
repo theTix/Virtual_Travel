@@ -1,6 +1,5 @@
 .first-section {
     min-height: 100vh;
-    color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -9,12 +8,13 @@
 }
 
 .first-section--text, .first-section--box {
+    color: var(--text-color);
     background: var(--container-background);
     border-radius: 20px;
 }
 
 .first-section--text {
-    width: 530px;
+    max-width: 600px;
     min-height: 500px;
     text-align: justify;
     margin-top: 50px;
@@ -33,13 +33,14 @@
 }
 
 .first-section--nav-containers {
-    width: 600px;
+    max-width: 600px;
     height: 500px;
+    margin: 0 20px;
 }
 
 .first-section--box {
     margin: 20px 0;
-    padding: 15px;
+    padding: 30px 15px;
 }
 
 .first-section--box:first-child, .first-section--box:last-child {
@@ -47,6 +48,27 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.first-section--box:first-child::after, .first-section--box:last-child::after {
+    content: "";
+    width: 0;
+    height: 100%;
+    background: var(--login-background);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    transition: .5s ease-in-out;
+}
+
+.first-section--box:first-child:hover:after, .first-section--box:last-child:hover::after {
+    width: 100%;
 }
 
 .first-section--box h1 {
@@ -55,10 +77,12 @@
 
 .first-section--box p {
     font-size: 2.6rem;
+    z-index: 1;
 }
 
 .first-section--box-icon-more {
     font-size: 2rem;
+    z-index: 1;
 }
 
 .first-section--swiper-slide {
@@ -81,4 +105,59 @@
     bottom: 0;
     right: -10px;
     background: var(--text-color);
+}
+
+@media screen and (max-width: 1249px) {
+    .first-section--text {
+        margin-top: 140px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .first-section--text, 
+    .first-section--nav-containers {
+        width: 500px;
+    }
+
+    .first-section--nav-containers {
+        height: 400px;
+    }
+
+    .first-section--box h1 {
+        font-size: 2rem;
+    }
+
+    .first-section--box p {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .first-section--text, 
+    .first-section--nav-containers {
+        width: 400px;
+    }
+
+    .first-section--box h1 {
+        font-size: 1.8rem;
+    }
+
+    .first-section--box p {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .first-section--text, 
+    .first-section--nav-containers {
+        width: 330px;
+    }
+
+    .first-section--box h1 {
+        font-size: 1.6rem;
+    }
+
+    .first-section--box p {
+        font-size: 1.4rem;
+    }
 }

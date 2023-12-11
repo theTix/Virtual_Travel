@@ -17,14 +17,3 @@
 body {
   overflow-x:hidden;
 }
-
-.bg-color1 {
-  background: url(./assets/world.jpg) no-repeat;
-  background-size: 100% 100%;
-}
-
-@media screen and (max-width: 1300px) {
-  .bg-color1 {
-    background-size: auto;
-  }
-}
