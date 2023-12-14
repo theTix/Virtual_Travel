@@ -1,0 +1,128 @@
+.second-section--container {
+    padding-top: 130px;
+    min-height: 100vh;
+    color: var(--text-color);
+    background: url(../assets/mountains.jpg) no-repeat;
+    background-size: 100% 100%;
+    padding-bottom: 30px;
+}
+
+.second-section--container h2 {
+    font-size: 3rem;
+    margin: 30px 60px;
+}
+
+.second-section--p-and-btn-container {
+    padding: 30px;
+    border-radius: 20px;
+    background: var(--container-background-two);
+    width: 80%;
+    margin: 30px auto 60px auto;
+}
+
+.second-section--p-container.show {
+    height: auto;
+}
+
+.second-section--p-container p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.second-section--p-container-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.second-section--p-container-btn button {
+    border: none;
+    border-radius: 15px;
+    background: var(--login-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: padding .3s ease-in-out;
+    display: none;
+}
+
+.second-section--p-container-btn button:hover {
+    background: var(--login-background-full-opacity);
+    padding: 10px 30px;
+}
+
+.second-section--p-container-btn-icon {
+    font-size: 2rem;
+}
+
+@keyframes rotateForwards {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes rotateBackwards {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.second-section--p-container-btn-icon.rotateForwards {
+    animation: rotateForwards .5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.second-section--p-container-btn-icon.rotateBackwards {
+    animation: rotateBackwards .5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@media screen and (max-width: 1300px) {
+    .second-section--container {
+      background-size: auto 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .second-section--container h2 {
+        font-size: 2.2rem
+    }
+
+    .second-section--p-container {
+        overflow-y: hidden;
+        height: 500px;
+    }
+
+    .second-section--p-container p {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .second-section--p-container-btn button {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .second-section--container h2 {
+        font-size: 2rem
+    }
+
+    .second-section--p-container p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+}

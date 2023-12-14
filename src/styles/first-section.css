@@ -5,6 +5,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 0 40px;
+    padding-bottom: 30px;
 }
 
 .first-section--text, .first-section--box {
@@ -14,10 +15,10 @@
 }
 
 .first-section--text {
-    max-width: 600px;
+    max-width: 650px;
     min-height: 500px;
     text-align: justify;
-    margin-top: 50px;
+    margin-top: 150px;
     padding: 30px;
 }
 
@@ -72,11 +73,11 @@
 }
 
 .first-section--box h1 {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
 }
 
 .first-section--box p {
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     z-index: 1;
 }
 
@@ -139,11 +140,11 @@
     }
 
     .first-section--box h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .first-section--box p {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 }
 
@@ -154,10 +155,10 @@
     }
 
     .first-section--box h1 {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
 
     .first-section--box p {
-        font-size: 1.4rem;
+        font-size: 1.1rem;
     }
 }
