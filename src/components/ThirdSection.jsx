@@ -11,13 +11,22 @@ import { RiArrowRightDoubleLine } from "react-icons/ri";
 import '../styles/third-section.css';
 
 const ThirdSection = () => {
-  const [ viewText, setViewText ] = useState(false);
-  const [ animationName, setAnimationName ] = useState("rotateBackwards");
+  const [ clickedIndex, setClickedIndex ] = useState(Array(people.length).fill("closed"));
+  const [ animationNames, setAnimationNames ] = useState(Array(people.length).fill("btn-close"));
 
-  const handleClick = () => {
-    setViewText((prevViewText) => !prevViewText);
-    setAnimationName((prevAnimationName) => prevAnimationName === "rotateForwards" ? "rotateBackwards" : "rotateForwards");
-  }
+  const handleBtn = (index) => {
+    setClickedIndex((prevClickedIndex) => {
+      const newClickedIndex = [...prevClickedIndex];
+      newClickedIndex[index] = prevClickedIndex[index] === "opened" ? "closed" : "opened";
+      return newClickedIndex;
+    });
+
+    setAnimationNames((prevAnimationNames) => {
+      const newAnimationNames = [...prevAnimationNames];
+      newAnimationNames[index] = prevAnimationNames[index] === "btn-close" ? "btn-open" : "btn-close";
+      return newAnimationNames;
+    });
+  };
 
   return (
     <div className='third-section--container'>
@@ -25,15 +34,15 @@ const ThirdSection = () => {
         <h2>People behind Virtual Travel</h2>
         <div className="third-section--people-container">
           {
-            people.map((person) => (
+            people.map((person, index) => (
               <div className="third-section--people-container-box" key={person.id}>
                 <img src={person.image} alt={person.name} />
                 <div className="third-section--people-container-box-text">
                   <h3>{person.name}</h3>
-                  <p>{person.about}</p>
+                  <p className={`${clickedIndex[index]}`}>{person.about}</p>
                 </div>
-                <button className='third-section--people-container-box-btn' onClick={handleClick}>
-                  <RiArrowRightDoubleLine className={`third-section--people-container-box-btn-icon ${animationName}`} />
+                <button className='third-section--people-container-box-btn' onClick={() => handleBtn(index)}>
+                  <RiArrowRightDoubleLine className={`third-section--people-container-box-btn-icon ${animationNames[index]}`} />
                 </button>
               </div>
             ))

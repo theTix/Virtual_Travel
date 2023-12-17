@@ -1,0 +1,117 @@
+.n-america--container {
+    overflow-x: hidden;
+}
+
+.n-america--first-section {
+    height: 100vh;
+}
+
+.n-america--first-section img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.n-america--first-section h2 {
+    position: absolute;
+    top: 360px;
+    left: 200px;
+    font-size: 4rem;
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+.n-america--second-section {
+    background: var(--n-america-background);
+    display: flex;
+    flex-direction: column;
+    padding: 100px 30px 30px 30px;
+    position: relative;
+}
+
+.n-america--second-section::after {
+    content: "";
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(180deg, rgba(23,18,8,0) 0%, rgba(23,18,8,1) 100%);
+}
+
+.n-america--second-section-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.n-america--second-section-image {
+    width: 400px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px 10px var(--container-background-two);
+    margin: 20px;
+}
+
+.n-america--second-section-image img {
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.n-america--second-section-text {
+    width: 500px;
+    text-align: center;
+}
+
+.n-america--second-section-text p {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.n-america--second-section-row-divider {
+    content: "";
+    background: var(--text-color);
+    width: 80%;
+    height: 1px;
+    margin: 30px auto;
+}
+
+@media screen and (max-width: 1300px) {
+    .n-america--first-section {
+        width: 100%;
+        height: 700px;
+    }
+
+    .n-america--first-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right;
+    }
+
+    .n-america--first-section h2 {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3.8rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .n-america--first-section h2 {
+        font-size: 3.4rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .n-america--first-section h2 {
+        font-size: 3rem;
+    }
+}

@@ -69,10 +69,10 @@ const FirstSection = () => {
               }
             </Swiper>
           </div>
-          <div className="first-section--box">
+          <NavLink className="first-section--box" to="destination">
             <p><FcBinoculars /> Check out different cultures</p>
             <TbArrowBadgeRightFilled className='first-section--box-icon-more' />
-          </div>
+          </NavLink>
         </div>
     </div>
   )

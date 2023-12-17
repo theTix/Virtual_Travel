@@ -3,11 +3,17 @@
 :root {
   --text-color: white;
   --text-color-hover: rgb(209, 209, 209);
+  --btn-color2: rgb(209, 209, 209);
+  --btn-color2-hover: rgba(209, 209, 209, .7);
   --text-color-active: rgb(24, 86, 157);
   --login-background: rgba(2, 44, 92, .7);
   --login-background-full-opacity: rgba(2, 44, 92, 1);
   --container-background: rgba(2, 19, 51, 0.902);
   --container-background-two: rgba(0, 0, 0, .4);
+  --container-box-shadow: rgba(24, 86, 157, .2);
+  --map-dot-color: rgb(0, 0, 0);
+  --flag-color: rgb(0, 57, 162);
+  --n-america-background: #171208;
 }
 
 * {

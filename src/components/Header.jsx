@@ -29,7 +29,7 @@ const Header = () => {
             <div className="header--nav-and-login">
                 <nav className="header--nav">
                     <NavLink className="header--nav-a" to="about">About</NavLink>
-                    <NavLink className="header--nav-a" to="">Destination</NavLink>
+                    <NavLink className="header--nav-a" to="destination">Destination</NavLink>
                     <NavLink className="header--nav-a" to="">Contact</NavLink>
                 </nav>
                 <div className="header--menu-and-login">

@@ -21,7 +21,7 @@
 }
 
 .second-section--p-container.show {
-    height: auto;
+    max-height: 1000px;
 }
 
 .second-section--p-container p {
@@ -61,25 +61,6 @@
     font-size: 2rem;
 }
 
-@keyframes rotateForwards {
-    0% {
-        transform: rotate(0);
-    }
-
-    100% {
-        transform: rotate(180deg);
-    }
-}
-
-@keyframes rotateBackwards {
-    0% {
-        transform: rotate(180deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 .second-section--p-container-btn-icon.rotateForwards {
     animation: rotateForwards .5s ease-in-out;
     animation-fill-mode: forwards;
@@ -103,7 +84,8 @@
 
     .second-section--p-container {
         overflow-y: hidden;
-        height: 500px;
+        max-height: 500px;
+        transition: max-height .5s ease-in-out;
     }
 
     .second-section--p-container p {

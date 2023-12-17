@@ -33,7 +33,7 @@ const Navbar = ({ menuContainer, setMenuContainer, handleClick }) => {
             <NavLink className="navbar--nav-title" to="/" onClick={handleClick}>Virtual Travel <span className='navbar--title--icon'>&#128747;</span></NavLink>
             <nav className="navbar--nav">
               <NavLink className="navbar--nav-a" to="about" onClick={handleClick}>About</NavLink>
-              <NavLink className="navbar--nav-a" to="" onClick={handleClick}>Destination</NavLink>
+              <NavLink className="navbar--nav-a" to="destination" onClick={handleClick}>Destination</NavLink>
               <NavLink className="navbar--nav-a" to="" onClick={handleClick}>Contact</NavLink>
             </nav> 
         </div>

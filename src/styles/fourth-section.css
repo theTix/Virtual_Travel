@@ -1,0 +1,124 @@
+.fourth-section--container {
+    background: url(../assets/plane-departure3-blurred.jpg) no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
+}
+
+.fourth-section--container h3 {
+    padding-top: 130px;
+    color: var(--text-color);
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+.fourth-section--map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin: auto;
+    background: transparent;
+    position: relative;
+}
+
+.fourth-section--map {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.fourth-section-map-dot {
+    content: "";
+    position: absolute;
+    width: 1%;
+    height: 1.5%;
+    background: var(--map-dot-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.fourth-section-map-dot.n-america {
+    top: 30%;
+    left: 15%;
+}
+
+.fourth-section-map-dot.s-america {
+    top: 65%;
+    left: 23%;
+}
+
+.fourth-section-map-dot.europe {
+    top: 33%;
+    left: 55%;
+}
+
+.fourth-section-map-dot.africa {
+    top: 50%;
+    left: 53%;
+}
+
+.fourth-section-map-dot.asia {
+    top: 37%;
+    left: 67%;
+}
+
+.fourth-section-map-dot.australia {
+    top: 76%;
+    left: 87%;
+}
+
+.fourth-section-map-dot-flag {
+    font-size: 2rem;
+    position: absolute;
+    top: -26px;
+    left: 1px;
+    color: transparent;
+    transition: color .2s ease-in-out;
+}
+
+.fourth-section-map-dot:hover .fourth-section-map-dot-flag {
+    color: var(--flag-color); 
+}
+
+.fourth-section--map-selection {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fourth-section--map-selection-box {
+    margin: 20px 0;
+    padding: 7px 10px;
+    width: 300px;
+    outline: solid 2px var(--text-color);
+    border-radius: 10px;
+    background: transparent;
+    z-index: 1;
+}
+
+.fourth-section--map-selection-box:hover {
+    outline: none;
+    background: var(--login-background-full-opacity);
+}
+
+.fourth-section--map-selection-box h4 {
+    font-size: 1.5rem;
+    z-index: 2;
+    text-align: center;
+    color: var(--text-color)
+}
+
+@media screen and (max-width: 850px) {
+
+    .fourth-section--map, .fourth-section-map-dot {
+        display: none;
+    }
+    
+    .fourth-section--map-selection {
+        display: flex;
+    }
+}
