@@ -13,7 +13,14 @@
   --container-box-shadow: rgba(24, 86, 157, .2);
   --map-dot-color: rgb(0, 0, 0);
   --flag-color: rgb(0, 57, 162);
-  --n-america-background: #171208;
+  --n-america-background: rgb(23, 18, 8);
+  --s-america-background: rgb(11, 23, 8);
+  --europe-background: rgb(24, 27, 20);
+  --africa-background: rgb(32, 23, 6);
+  --asia-background: rgb(25, 41, 38);
+  --country-languages-box: rgb(31, 25, 11);
+  --country2-languages-box: rgb(19, 30, 11);
+  --country-languages-text: rgb(183, 213, 248);
 }
 
 * {

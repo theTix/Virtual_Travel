@@ -25,7 +25,7 @@ const FourthSection = () => {
             <NavLink className="fourth-section-map-dot asia" to="asia">
                 <RiFlagFill className='fourth-section-map-dot-flag' />
             </NavLink>
-            <NavLink className="fourth-section-map-dot australia" to="australia">
+            <NavLink className="fourth-section-map-dot oceania" to="oceania">
                 <RiFlagFill className='fourth-section-map-dot-flag' />
             </NavLink>
 
@@ -45,8 +45,8 @@ const FourthSection = () => {
                 <NavLink className="fourth-section--map-selection-box" to="asia">
                     <h4>Asia</h4>
                 </NavLink>
-                <NavLink className="fourth-section--map-selection-box" to="australia">
-                    <h4>Australia</h4>
+                <NavLink className="fourth-section--map-selection-box" to="oceania">
+                    <h4>Oceania</h4>
                 </NavLink>
             </div>
         </div>

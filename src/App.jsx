@@ -22,7 +22,7 @@ import SouthAmericaPage from './components/destinations/SouthAmericaPage';
 import EuropePage from './components/destinations/EuropePage';
 import AfricaPage from './components/destinations/AfricaPage';
 import AsiaPage from './components/destinations/AsiaPage';
-import AustraliaPage from './components/destinations/AustraliaPage';
+import OceaniaPage from './components/destinations/OceaniaPage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -35,7 +35,7 @@ const router = createBrowserRouter(
       <Route path="destination/europe" element={<EuropePage />} />
       <Route path="destination/africa" element={<AfricaPage />} />
       <Route path="destination/asia" element={<AsiaPage />} />
-      <Route path="destination/australia" element={<AustraliaPage />} />
+      <Route path="destination/oceania" element={<OceaniaPage />} />
     </Route>
   )
 )
