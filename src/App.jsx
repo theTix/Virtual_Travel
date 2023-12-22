@@ -13,9 +13,11 @@ import {
 import './App.css';
 
 //pages
+import Header from './components/Header';
+import LogIn from './components/authentication/LogIn';
+import SignUp from './components/authentication/SignUp';
 import FirstPage from './components/FirstPage';
 import SecondPage from './components/SecondPage';
-import Header from './components/Header';
 import ThirdPage from './components/ThirdPage';
 import NorthAmericaPage from './components/destinations/NorthAmericaPage';
 import SouthAmericaPage from './components/destinations/SouthAmericaPage';
@@ -27,6 +29,8 @@ import OceaniaPage from './components/destinations/OceaniaPage';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Header />}>
+      <Route path="signup" element={<SignUp />} />
+      <Route path="login" element={<LogIn />} />
       <Route index element={<FirstPage />} />
       <Route path="about" element={<SecondPage />} />
       <Route path="destination" element={<ThirdPage />} />

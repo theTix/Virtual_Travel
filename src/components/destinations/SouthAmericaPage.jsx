@@ -18,14 +18,14 @@ const SouthAmericaPage = () => {
   return (
     <div className='destination-mark--container'>
       <div className="destination-mark--first-section" id='s-america--first-section'>
-        <img src={chile} alt="Bow Bridge in New York" />
+        <img src={chile} alt="Gray Rocky Mountain Under the Blue Sky in Chile" />
         <h2>South America</h2>
       </div>
 
       <div className="destination-mark--second-section" id='s-america--second-section'>
         <div className="destination-mark--second-section-row">
           <div className="destination-mark--second-section-image">
-            <img src={uruguay} alt="The Streets of Duluth" />
+            <img src={uruguay} alt="Bird's-eye View of the City of Punta del Este in Uruguay" />
           </div>
           <div className="destination-mark--second-section-text">
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis tempora enim eligendi nostrum perspiciatis voluptatem perferendis cupiditate optio, quo, minus odio? Sunt quasi doloremque est quas rem dignissimos reiciendis eum nobis alias quod, earum esse iure neque aliquam repudiandae quos?</p>
@@ -38,10 +38,10 @@ const SouthAmericaPage = () => {
 
         <div className="destination-mark--second-section-row">
           <div className="destination-mark--second-section-image">
-            <img src={colombia} alt="The Streets of San Francisco" />
+            <img src={colombia} alt="White Clouds above the Town of Guatapé in Colombia" />
           </div>
           <div className="destination-mark--second-section-image">
-            <img src={colombia2} alt="Sunset in Glendo" />
+            <img src={colombia2} alt="Aerial View of Medellín city during Night Time in Colombia" />
           </div>
         </div>
 
@@ -54,7 +54,7 @@ const SouthAmericaPage = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ad ex a dolore sit odit, culpa quod delectus maxime minima! Quia sint doloribus sit eligendi eum aut ad, quidem a dolorem blanditiis ab, praesentium natus fugiat quos qui quasi! Distinctio.</p>
           </div>
           <div className="destination-mark--second-section-image">
-            <img src={peru} alt="Parliament Hill in Ottawa" />
+            <img src={peru} alt="Brown Wooden Boat on Water in Peru" />
           </div>
         </div>
 

@@ -18,9 +18,18 @@
   --europe-background: rgb(24, 27, 20);
   --africa-background: rgb(32, 23, 6);
   --asia-background: rgb(25, 41, 38);
+  --oceania-background: rgb(4, 41, 3);
   --country-languages-box: rgb(31, 25, 11);
   --country2-languages-box: rgb(19, 30, 11);
   --country-languages-text: rgb(183, 213, 248);
+  --signup--container-background: rgba(0, 32, 68, 0.7);
+  --signup--valid-sign: rgb(0, 211, 0);
+  --signup--invalid-sign: red;
+  --signup--p-msgs-background: rgba(0, 0, 0, .7);
+  --signup--button-color: rgb(3, 27, 55);
+  --signup--button-color-hover: rgb(2, 20, 41);
+  --signup--button-disabled-color: rgb(67, 115, 131);
+  --signup--button-disabled-text-color: rgb(205, 205, 205);
 }
 
 * {

@@ -1,0 +1,182 @@
+.sign-up--background {
+    background: url("./../../assets/authentication/landscape-focus-blur.jpg") no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    padding: 150px 0;
+    overflow-x: hidden;
+}
+
+.sign-up--success, .sign-up--form {
+    margin: auto;
+    width: 500px;
+    background: var(--signup--container-background);
+    padding: 30px;
+    border-radius: 20px;
+    color: var(--text-color);
+}
+
+.sign-up--success h1, .sign-up--form h1 {
+    text-align: center;
+    font-size: 2.8rem;
+}
+
+.sign-up--form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sign-up--form > label, section {
+    font-size: 1.2rem;
+}
+
+.sign-up--form form > label {
+    margin-top: 20px;
+}
+
+.sign-up--form label > span {
+    font-size: 1.2rem;
+}
+
+.valid {
+    display: inline;
+    color: var(--signup--valid-sign);
+}
+
+.hide {
+    display: none;
+}
+
+.invalid {
+    display: inline;
+    color: var(--signup--invalid-sign);
+}
+
+.sign-up--form form input {
+    border-radius: 20px;
+    padding: 5px 7px;
+    border: none;
+    font-size: 1rem;
+}
+
+.sign-up--form > input, section {
+    margin: 10px 0;
+}
+
+.instruction-note {
+    border-radius: 10px;
+    background: var(--signup--p-msgs-background);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.instruction-note p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: .9rem;
+    flex-wrap: wrap;
+}
+
+.instructions {
+    position: static;
+}
+
+.offscreen {
+    position: absolute;
+    left: -1000px;
+}
+
+.instructions-icon {
+    margin-right: 5px;
+}
+
+.instruction-note div > span {
+    margin-left: 2px;
+}
+
+.sign-up--form form > button {
+    margin: 30px auto;
+    padding: 12px;
+    width: 200px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 15px;
+    border: none;
+    transition: .1s ease-in-out;
+}
+
+.btn-enabled {
+    background: var(--signup--button-color);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.btn-disabled {
+    background: var(--signup--button-disabled-color);
+    color: var(--signup--button-disabled-text-color);
+    cursor:not-allowed;
+}
+
+.btn-enabled:hover {
+    background: var(--signup--button-color-hover);
+}
+
+.btn-enabled:active {
+    transform: scale(0.95);
+}
+
+.btn-enabled:active::after {
+    content: "";
+    animation: buttonBounce .3s ease;
+}
+
+.sign-up--form section:last-of-type {
+    text-align: center;
+}
+
+.signup--line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up--login {
+    color: var(--text-color);
+    text-decoration: underline;
+    font-weight: 800;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .sign-up--background {
+        background-size: auto 100%;
+    }
+
+    .sign-up--success, .sign-up--form {
+        width: 400px;
+    }
+
+    .sign-up--success h1, .sign-up--form h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .sign-up--success, .sign-up--form {
+        width: 350px;
+    }
+
+    .sign-up--success h1, .sign-up--form h1 {
+        font-size: 2.2rem;
+    }
+    
+    #confirmnote p {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 
 //react icons
-import { TbBaselineDensityMedium, TbWorldPin, TbUserFilled } from "react-icons/tb";
+import { TbBaselineDensityMedium, TbWorldPin, TbUserFilled, TbDoorEnter } from "react-icons/tb";
 
 //styles
 import '../styles/header.css';
@@ -30,13 +30,17 @@ const Header = () => {
                 <nav className="header--nav">
                     <NavLink className="header--nav-a" to="about">About</NavLink>
                     <NavLink className="header--nav-a" to="destination">Destination</NavLink>
-                    <NavLink className="header--nav-a" to="">Contact</NavLink>
+                    <NavLink className="header--nav-a" to="contact">Contact</NavLink>
                 </nav>
                 <div className="header--menu-and-login">
                     <TbBaselineDensityMedium className='header--menu-icon' onClick={handleClick} />
                     <div className="header--login">
                         <TbUserFilled />
-                        <a>Log In</a>
+                        <NavLink className="header--login-and-signup" to="login">Log In</NavLink>
+                    </div>
+                    <div className="header--signup">
+                        <TbDoorEnter />
+                        <NavLink className="header--login-and-signup" to="signup">Sign Up</NavLink>
                     </div>
                 </div>
                 <Navbar menuContainer={menuContainer} setMenuContainer={setMenuContainer} handleClick={handleClick} />

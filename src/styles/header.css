@@ -50,7 +50,7 @@
     align-items: center;
 }
 
-.header--nav-a, .header--login, .header--menu-icon {
+.header--nav-a, .header--login, .header--menu-icon, .header--signup {
     font-size: 1.5rem;
     color: var(--text-color);
     font-weight: 600;
@@ -82,11 +82,11 @@
     width: 100%;
 }
 
-.header--nav-a:active {
+.header--nav-a.active {
     color: var(--text-color-active);
 }
 
-.header--nav-a:active::after {
+.header--nav-a.active::after {
     background: var(--text-color-active);
     width: 100%;
 }
@@ -104,7 +104,7 @@
     cursor: pointer;
 }
 
-.header--login {
+.header--login, .header--signup {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -115,12 +115,16 @@
     transition: .1s ease-in-out;
 }
 
-.header--login:hover {
+.header--login:hover, .header--signup:hover {
     background-color: var(--login-background-full-opacity);
 }
 
-.header--login:active {
+.header--login:active, .header--signup:active {
     transform: scale(0.95);
+}
+
+.header--login-and-signup {
+    color: var(--text-color);
 }
 
 @keyframes buttonBounce {
@@ -141,9 +145,19 @@
     }
 }
 
-.header--login:active::after {
+.header--login:active::after, .header--signup:active::after {
     content: "";
     animation: buttonBounce .3s ease;
+}
+
+.header--signup {
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+    .header--login a, .header--signup a {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -159,9 +173,13 @@
         display: flex;
     }
 
-    .header--login {
+    .header--login, .header--signup {
         padding: 7px 12px;
         font-size: 1.3rem;
+    }
+
+    .header--login a, .header--signup a {
+        display: inline;
     }
 }
 
@@ -176,22 +194,39 @@
         font-size: 2rem;
     }
 
-    .header--login {
+    .header--login, .header--signup {
         padding: 9px 11px;
         font-size: 1.3rem;
     }
 
-    .header--login a {
+    .header--login a, .header--signup a {
         display: none;
     }
 }
 
 @media screen and (max-width: 600px) {
     .header--title {
-        width: 600px;
+        width: 630px;
+        margin-right: 50px;
     }
 
     .header--title-h1, .header--title--icon {
         font-size: 1.8rem;
+    }
+
+    .header--signup {
+        margin-left: 10px;
+    }
+
+    .header--login svg, .header--signup svg {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .header--title {
+        width: 630px;
+        margin-right: 30px;
+        margin-left: 10px;
     }
 }
