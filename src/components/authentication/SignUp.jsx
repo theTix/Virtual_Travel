@@ -1,6 +1,13 @@
+//react
 import { useRef, useState, useEffect } from "react";
+
+//react-router
 import { NavLink } from "react-router-dom";
+
+//react icons
 import { FaCheck, FaTimes, FaInfoCircle } from "react-icons/fa";
+
+//style
 import "./../../styles/authentication/signup.css";
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
@@ -69,16 +76,16 @@ const SignUp = () => {
     }
 
   return (
-    <div className="sign-up--background">
+    <div className="sign-up-and-log-in--background">
         {success ? (
-            <div className="sign-up--success">
+            <div className="sign-up-and-log-in--success">
                 <h1>Success!</h1>
-                <p className="signup--line">
-                    <NavLink className="sign-up--login" to="/login">Log In</NavLink>
+                <p className="sign-up-and-log-in--line">
+                    <NavLink className="sign-up-or-log-in" to="/login">Log In</NavLink>
                 </p>
             </div>
         ) : (
-        <div className="sign-up--form">
+        <div className="sign-up-and-log-in--form">
             <p ref={errMsgRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
             <h1>Sign Up</h1>
             <form onSubmit={handleSubmit}>
@@ -168,7 +175,7 @@ const SignUp = () => {
             <section>
                 Already registered?<br />
                 <span>
-                    <NavLink className="sign-up--login" to="/login">Log In</NavLink>
+                    <NavLink className="sign-up-or-log-in" to="/login">Log In</NavLink>
                 </span>
             </section>
         </div>

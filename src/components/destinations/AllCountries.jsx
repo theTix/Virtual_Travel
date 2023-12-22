@@ -10,6 +10,40 @@ import "./../../styles/all-countries.css";
 //react icons
 import { RiArrowRightDoubleLine } from "react-icons/ri";
 
+const Country = ({ country }) => {
+  const [ isOpen, setIsOpen ] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsOpen(!isOpen);
+  }
+
+  const handleFlagClick = () => {
+    window.location.href = country.maps.googleMaps;
+  }
+
+  return (
+    <div className='country-box'>
+      <span className='country-box-flag' onClick={handleFlagClick}>{country.flag}</span>
+      <h4>{country.name.common}</h4>
+      <div className={`country-box-languages ${isOpen ? "open" : "close"}`}>
+        {
+          Object.values(country.languages).map((lang, index) => (
+            <span className='country-box-languages-all' key={index}>{lang}</span>
+          ))
+        }
+      </div>
+      {
+        Object.values(country.languages).length > 3 && (
+          <button className="country-box-button" onClick={handleButtonClick}>
+            <RiArrowRightDoubleLine className={`country-box-button-icon ${isOpen ? "btn-open" : "btn-close"}`} />
+          </button>
+        )
+      }
+      
+    </div>
+  )
+}
+
 const AllCountries = ({ continentCode }) => {
   const [ countries, setCountries ] = useState([]);
 
@@ -24,25 +58,7 @@ const AllCountries = ({ continentCode }) => {
       <div className="all-countries--container">
         {
           countries.map((country) => (
-            <a className='country-box' key={country.cca3} href={country.maps.googleMaps}>
-              <span className='country-box-flag'>{country.flag}</span>
-              <h4>{country.name.common}</h4>
-              <div className="country-box-languages">
-                {
-                  Object.values(country.languages).map((lang, index) => (
-                    <span className='country-box-languages-all' key={index}>{lang}</span>
-                  ))
-                }
-              </div>
-              {
-                Object.values(country.languages).length > 3 && (
-                  <button className='country-box-button'>
-                    <RiArrowRightDoubleLine className='country-box-button-icon' />
-                  </button>
-                )
-              }
-              
-            </a>
+            <Country key={country.cca3} country={country} />
           ))
         }
       </div>

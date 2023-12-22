@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import "../styles/second-page.css";
+//components
 import SecondSection from './SecondSection';
 import ThirdSection from './ThirdSection';
 

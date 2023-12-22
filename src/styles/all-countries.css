@@ -1,6 +1,7 @@
 .all-countries {
     width: 100%;
     color: var(--text-color);
+    padding-bottom: 70px;
 }
 
 .all-countries h2 {
@@ -12,7 +13,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 
@@ -20,7 +21,7 @@
     border: solid 2px var(--text-color);
     border-radius: 10px;
     width: 200px;
-    height: 290px;
+    min-height: 290px;
     margin: 15px;
     display: flex;
     flex-direction: column;
@@ -59,8 +60,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100px;
     overflow: hidden;
+    transition: max-height .8s ease-in-out;
+}
+
+.country-box-languages.open {
+    max-height: 10000px;
+}
+
+.country-box-languages.close {
+    max-height: 100px;
 }
 
 .country-box-languages-all {
@@ -70,17 +79,31 @@
 }
 
 .country-box-button {
+    margin-top: 10px;
+    width: 80px;
+    height: 30px;
     color: var(--country-languages-box);
-    background: var(--text-color);
+    background: var(--expand-countries-button);
     border: none;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 2;
+    cursor: pointer;
 }
 
 .country-box-button-icon {
     padding: 3px;
     font-size: 1.3rem;
 }
+.country-box-button-icon.btn-open {
+    animation: rotateForwards .5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+  
+.country-box-button-icon.btn-close {
+    animation: rotateBackwards .5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+

@@ -7,6 +7,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 
 //react icons
 import { TbBaselineDensityMedium, TbWorldPin, TbUserFilled, TbDoorEnter } from "react-icons/tb";
+import { RiFacebookCircleFill, RiYoutubeFill, RiPinterestFill, RiTwitterXFill, RiInstagramFill } from "react-icons/ri";
 
 //styles
 import '../styles/header.css';
@@ -34,14 +35,14 @@ const Header = () => {
                 </nav>
                 <div className="header--menu-and-login">
                     <TbBaselineDensityMedium className='header--menu-icon' onClick={handleClick} />
-                    <div className="header--login">
+                    <NavLink className="header--login" to="login">
                         <TbUserFilled />
-                        <NavLink className="header--login-and-signup" to="login">Log In</NavLink>
-                    </div>
-                    <div className="header--signup">
+                        <a className="header--login-and-signup">Log In</a>
+                    </NavLink>
+                    <NavLink className="header--signup" to="signup">
                         <TbDoorEnter />
-                        <NavLink className="header--login-and-signup" to="signup">Sign Up</NavLink>
-                    </div>
+                        <a className="header--login-and-signup">Sign Up</a>
+                    </NavLink>
                 </div>
                 <Navbar menuContainer={menuContainer} setMenuContainer={setMenuContainer} handleClick={handleClick} />
             </div>
@@ -50,6 +51,22 @@ const Header = () => {
         <main>
             <Outlet />
         </main>
+
+        <div className="footer">
+            <div className='footer-row'>
+                <h2>Virtual Travel</h2>
+                <div className="links-to-websites">
+                    <a href="https://www.facebook.com"><RiFacebookCircleFill className='footer-icons' /></a>
+                    <a href="https://www.youtube.com"><RiYoutubeFill className='footer-icons' /></a>
+                    <a href="https://www.instagram.com"><RiInstagramFill className='footer-icons' /></a>
+                    <a href="https://www.pinterest.com"><RiPinterestFill className='footer-icons' /></a>
+                    <a href="https://www.twitter.com"><RiTwitterXFill className='footer-icons' /></a>
+                </div>
+            </div>
+            <div className='footer-row'>
+                <p>@2023 Virtual Travel | All Rights Reserved</p>
+            </div>
+        </div>
     </>
     
   )

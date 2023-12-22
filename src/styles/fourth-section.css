@@ -2,6 +2,7 @@
     background: url(../assets/plane-departure3-blurred.jpg) no-repeat;
     background-size: 100% 100%;
     min-height: 100vh;
+    padding-bottom: 70px;
 }
 
 .fourth-section--container h3 {
