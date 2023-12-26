@@ -1,13 +1,14 @@
 //react
-import React, { useState } from 'react';
-
-//data
-import { people } from "../data/people.js";
+import { useState } from 'react';
 
 //react icons
 import { RiArrowRightDoubleLine } from "react-icons/ri";
 
+//data
+import { people } from "../data/people.js";
+
 //styles
+//styles(others)
 import '../styles/third-section.css';
 
 const ThirdSection = () => {

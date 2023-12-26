@@ -1,4 +1,5 @@
 //components
+//components(others)
 import SecondSection from './SecondSection';
 import ThirdSection from './ThirdSection';
 

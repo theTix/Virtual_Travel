@@ -1,16 +1,17 @@
 //react
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 //react-router-dom
 import { NavLink } from 'react-router-dom';
 
 //react icons
-import { TbBaselineDensityMedium, TbWorldPin } from "react-icons/tb";
+import { TbBaselineDensityMedium } from "react-icons/tb";
 
-//style
+//styles
+//styles(others)
 import '../styles/navbar.css';
 
-const Navbar = ({ menuContainer, setMenuContainer, handleClick }) => {
+const Navbar = ({ menuContainer, handleClick }) => {
   useEffect(() => {
     if(menuContainer === "flex") {
       document.body.style.overflow = "hidden";
@@ -34,7 +35,7 @@ const Navbar = ({ menuContainer, setMenuContainer, handleClick }) => {
             <nav className="navbar--nav">
               <NavLink className="navbar--nav-a" to="about" onClick={handleClick}>About</NavLink>
               <NavLink className="navbar--nav-a" to="destination" onClick={handleClick}>Destination</NavLink>
-              <NavLink className="navbar--nav-a" to="" onClick={handleClick}>Contact</NavLink>
+              <NavLink className="navbar--nav-a" to="contact" onClick={handleClick}>Contact</NavLink>
             </nav> 
         </div>
         

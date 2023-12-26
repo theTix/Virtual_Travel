@@ -1,26 +1,20 @@
 //react
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
-//react-router
+//react-router-dom
 import { NavLink } from "react-router-dom";
 
 
 const LogIn = () => {
   const userRef = useRef();
-  const errRef = useRef();
 
   const [ user, setUser ] = useState("");
   const [ pwd, setPwd] = useState("");
-  const [ errMsg, setErrMsg ] = useState("");
   const [ success, setSuccess ] = useState(false);
 
   useEffect(() => {
     userRef.current.focus();
   }, []);
-
-  useEffect(() => {
-    setErrMsg("");
-  }, [user, pwd])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,7 +36,6 @@ const LogIn = () => {
         </div>
       ) : (
         <div className="sign-up-and-log-in--form">
-          <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
           <h1>Log In</h1>
           <form onSubmit={handleSubmit}>
             <label htmlFor="username">

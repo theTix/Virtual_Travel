@@ -1,19 +1,21 @@
 //react
-import React from 'react';
 import { useState } from 'react';
 
 //react-router-dom
 import { NavLink, Outlet } from 'react-router-dom';
 
 //react icons
-import { TbBaselineDensityMedium, TbWorldPin, TbUserFilled, TbDoorEnter } from "react-icons/tb";
-import { RiFacebookCircleFill, RiYoutubeFill, RiPinterestFill, RiTwitterXFill, RiInstagramFill } from "react-icons/ri";
-
-//styles
-import '../styles/header.css';
+import { TbBaselineDensityMedium, TbDoorEnter, TbUserFilled } from "react-icons/tb";
+import { RiFacebookCircleFill, RiInstagramFill, RiPinterestFill, RiTwitterXFill, RiYoutubeFill } from "react-icons/ri";
 
 //components
+//components(others)
 import Navbar from './Navbar';
+
+//styles
+//styles(others)
+import '../styles/header.css';
+
 
 const Header = () => {
     const [ menuContainer, setMenuContainer ] = useState("none");

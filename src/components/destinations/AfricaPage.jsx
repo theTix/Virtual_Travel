@@ -1,18 +1,18 @@
-//react
-import React from 'react';
+//components
+//components/destinations
+import AllCountries from './AllCountries';
 
-//style
-import "./../../styles/africa.css";
-
-//images
-import morocco from "./../../assets/africa/chefchaouen_tangier-tétouan-al_hoceima_morocco.jpg";
-import tanzania from "./../../assets/africa/tanzania.jpg";
+//assets
+//assets/africa
 import egypt from "./../../assets/africa/al_wahat_al_dakhla_desert_new_valley_governorate_egypt.jpg";
+import morocco from "./../../assets/africa/chefchaouen_tangier-tétouan-al_hoceima_morocco.jpg";
 import southAfrica from "./../../assets/africa/cape_town_wc_south_africa.jpg";
 import southAfrica2 from "./../../assets/africa/mpumalanga_kzn_south_africa.jpg";
+import tanzania from "./../../assets/africa/tanzania.jpg";
 
-//components
-import AllCountries from './AllCountries';
+//styles
+//styles/destinations
+import "./../../styles/destinations/africa.css";
 
 const AfricaPage = () => {
   return (

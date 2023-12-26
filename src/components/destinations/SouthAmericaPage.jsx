@@ -1,18 +1,18 @@
-//react
-import React from 'react';
+//components
+//components/destinations
+import AllCountries from './AllCountries';
 
-//style
-import "./../../styles/s-america.css";
-
-//images
-import uruguay from "./../../assets/s-america/punta_del_este_maldonado_department_uruguay.jpg";
+//assets
+//assets/s-america
+import chile from "./../../assets/s-america/magallanes_and_chilean_antarctica_chile.jpg";
 import colombia from "./../../assets/s-america/guatapé_antioquia_colombia.jpg";
 import colombia2 from "./../../assets/s-america/medellín_antioquia_colombia.jpg";
 import peru from "./../../assets/s-america/puno_peru.jpg";
-import chile from "./../../assets/s-america/magallanes_and_chilean_antarctica_chile.jpg";
+import uruguay from "./../../assets/s-america/punta_del_este_maldonado_department_uruguay.jpg";
 
-//components
-import AllCountries from './AllCountries';
+//styles
+//styles/destinations
+import "./../../styles/destinations/s-america.css";
 
 const SouthAmericaPage = () => {
   return (

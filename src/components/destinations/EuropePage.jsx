@@ -1,18 +1,18 @@
-//react
-import React from 'react';
+//components
+//components/destinations
+import AllCountries from './AllCountries';
 
-//style
-import "./../../styles/europe.css";
-
-//images
+//assets
+//assets/europe
+import czechia from "./../../assets/europe/prague_czechia.jpg";
+import france from "./../../assets/europe/paris_france.jpg";
 import germany from "./../../assets/europe/gablenz_germany.jpg";
 import greece from "./../../assets/europe/greece.jpg";
 import italy from "./../../assets/europe/roma_lazio_italy.jpg";
-import czechia from "./../../assets/europe/prague_czechia.jpg";
-import france from "./../../assets/europe/paris_france.jpg";
 
-//components
-import AllCountries from './AllCountries';
+//styles
+//styles/destinations
+import "./../../styles/destinations/europe.css";
 
 const EuropePage = () => {
   return (

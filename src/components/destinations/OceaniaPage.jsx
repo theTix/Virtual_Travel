@@ -1,18 +1,18 @@
-//react
-import React from 'react';
+//components
+//components/destinations
+import AllCountries from './AllCountries';
 
-//style
-import "./../../styles/oceania.css";
-
-//images
+//assets
+//assets/oceania
 import australia from "./../../assets/oceania/north_bondi_nsw_australia.jpg";
 import australia2 from "./../../assets/oceania/bondi_beach_nsw_australia.jpg";
+import australia3 from "./../../assets/oceania/sydney_australia.jpg";
 import frenchPolynesia from "./../../assets/oceania/moorea_maiao_windward_islands,_french_polynesia.jpg";
 import samoa from "./../../assets/oceania/apia_upolu_samoa.jpg";
-import australia3 from "./../../assets/oceania/sydney_australia.jpg";
 
-//components
-import AllCountries from './AllCountries';
+//styles
+//styles/destinations
+import "./../../styles/destinations/oceania.css";
 
 const OceaniaPage = () => {
   return (

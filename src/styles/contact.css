@@ -1,0 +1,116 @@
+.contact--page {
+    background: url(./../assets/landscape-blur.jpg) no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    padding: 150px 0;
+}
+
+.contact--container {
+    width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background: var(--contact--container-background);
+    color: var(--text-color);
+}
+
+.contact--container h2 {
+    font-size: 2.8rem;
+}
+
+.contact--container h2, .contact--container p {
+    text-align: center;
+}
+
+.contact--container p, .contact--container a {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.contact--container a {
+    text-decoration: underline;
+}
+
+.contact--container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.contact--container form label {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.contact--container form input {
+    border-radius: 20px;
+    padding: 5px 7px;
+    border: none;
+    font-size: 1rem;
+}
+
+.contact--container form textarea {
+    position: relative;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 300px;
+    min-height: 40px;
+}
+
+.contact--container form button {
+    margin: 30px auto;
+    padding: 12px;
+    width: 200px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border-radius: 15px;
+    border: none;
+    transition: .1s ease-in-out;
+    background: var(--contact--button-color);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.contact--container form button:hover {
+    background: var(--contact--button-color-hover);
+}
+
+.contact--container form button:active {
+    transform: scale(0.95);
+}
+
+.contact--container form button:active::after {
+    content: "";
+    animation: buttonBounce .3s ease;
+}
+
+@media screen and (max-width: 1200px) {
+    .contact--page {
+        background-size: auto 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact--container {
+        width: 400px;
+    }
+
+    .contact--container h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .contact--container {
+        width: 350px;
+    }
+
+    .contact--container h2 {
+        font-size: 2.2rem;
+    }
+}

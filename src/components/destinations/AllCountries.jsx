@@ -1,14 +1,15 @@
 //react
 import React, { useState, useEffect } from 'react';
 
-//api
-import { getAllCountriesByContinent } from '../../data/countries';
-
-//style
-import "./../../styles/all-countries.css";
-
 //react icons
 import { RiArrowRightDoubleLine } from "react-icons/ri";
+
+//data
+import { getAllCountriesByContinent } from '../../data/countries';
+
+//styles
+//styles/destinations
+import "./../../styles/destinations/all-countries.css";
 
 const Country = ({ country }) => {
   const [ isOpen, setIsOpen ] = useState(false);

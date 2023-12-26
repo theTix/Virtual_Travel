@@ -1,36 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-  --text-color: white;
-  --text-color-hover: rgb(209, 209, 209);
+  --africa-background: rgb(32, 23, 6);
+  --asia-background: rgb(25, 41, 38);
   --btn-color2: rgb(209, 209, 209);
   --btn-color2-hover: rgba(209, 209, 209, .7);
-  --text-color-active: rgb(24, 86, 157);
-  --login-background: rgba(2, 44, 92, .7);
-  --login-background-full-opacity: rgba(2, 44, 92, 1);
+  --contact--button-color: rgb(5, 35, 69);
+  --contact--button-color-hover: rgb(4, 19, 35);
+  --contact--container-background: rgba(1, 20, 43, 0.8);
   --container-background: rgba(2, 19, 51, 0.902);
   --container-background-two: rgba(0, 0, 0, .4);
   --container-box-shadow: rgba(24, 86, 157, .2);
-  --map-dot-color: rgb(0, 0, 0);
-  --flag-color: rgb(0, 57, 162);
-  --expand-countries-button: rgb(189, 158, 35);
-  --n-america-background: rgb(23, 18, 8);
-  --s-america-background: rgb(11, 23, 8);
-  --europe-background: rgb(24, 27, 20);
-  --africa-background: rgb(32, 23, 6);
-  --asia-background: rgb(25, 41, 38);
-  --oceania-background: rgb(4, 41, 3);
-  --country-languages-box: rgb(31, 25, 11);
   --country2-languages-box: rgb(19, 30, 11);
+  --country-languages-box: rgb(31, 25, 11);
   --country-languages-text: rgb(183, 213, 248);
-  --signup--container-background: rgba(0, 32, 68, 0.7);
-  --signup--valid-sign: rgb(0, 211, 0);
-  --signup--invalid-sign: red;
-  --signup--p-msgs-background: rgba(0, 0, 0, .7);
+  --error--container-background: rgb(208, 207, 207);
+  --europe-background: rgb(24, 27, 20);
+  --expand-countries-button: rgb(189, 158, 35);
+  --flag-color: rgb(0, 57, 162);
+  --login-background: rgba(2, 44, 92, .7);
+  --login-background-full-opacity: rgba(2, 44, 92, 1);
+  --map-dot-color: rgb(0, 0, 0);
+  --n-america-background: rgb(23, 18, 8);
+  --oceania-background: rgb(4, 41, 3);
+  --s-america-background: rgb(11, 23, 8);
   --signup--button-color: rgb(3, 27, 55);
   --signup--button-color-hover: rgb(2, 20, 41);
   --signup--button-disabled-color: rgb(67, 115, 131);
   --signup--button-disabled-text-color: rgb(205, 205, 205);
+  --signup--container-background: rgba(0, 32, 68, 0.7);
+  --signup--invalid-sign: red;
+  --signup--p-msgs-background: rgba(0, 0, 0, .7);
+  --signup--valid-sign: rgb(0, 211, 0);
+  --text-color: white;
+  --text-color-active: rgb(24, 86, 157);
+  --text-color-hover: rgb(209, 209, 209);
 }
 
 * {

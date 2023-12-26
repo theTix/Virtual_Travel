@@ -1,18 +1,18 @@
-//react
-import React from 'react';
+//components
+//components/destinations
+import AllCountries from './AllCountries';
 
-//style
-import "./../../styles/asia.css";
-
-//images
-import vietnam from "./../../assets/asia/dong_da_ha_noi_vietnam.jpg";
-import thailand from "./../../assets/asia/thailand.jpg";
+//assets
+//assets/asia
+import gazibo from "./../../assets/asia/gazibo.jpg";
 import japan from "./../../assets/asia/tokyo_japan.jpg";
 import sKorea from "./../../assets/asia/incheon_south_korea.jpg";
-import gazibo from "./../../assets/asia/gazibo.jpg";
+import thailand from "./../../assets/asia/thailand.jpg";
+import vietnam from "./../../assets/asia/dong_da_ha_noi_vietnam.jpg";
 
-//components
-import AllCountries from './AllCountries';
+//styles
+//styles/destinations
+import "./../../styles/destinations/asia.css";
 
 const AsiaPage = () => {
   return (

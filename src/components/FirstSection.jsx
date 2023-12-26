@@ -1,13 +1,13 @@
 //react
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 //react-router-dom
 import { NavLink } from 'react-router-dom';
 
-//icons
-import { FcBinoculars } from "react-icons/fc";
+//react icons
 import { TbArrowBadgeRightFilled } from "react-icons/tb";
+import { FcBinoculars } from "react-icons/fc";
 
 //swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -21,7 +21,8 @@ import { DateTime } from 'luxon';
 //data
 import { timeData } from '../data/time.js';
 
-//css
+//styles
+//styles(others)
 import '../styles/first-section.css';
 
 

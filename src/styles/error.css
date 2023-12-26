@@ -1,0 +1,53 @@
+.error--page {
+    background: var(--error--container-background);
+    padding: 200px 0;
+    min-height: 100vh;
+}
+
+.error--container {
+    margin: 0 auto;
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: var(--contact--container-background);
+    border-radius: 20px;
+}
+
+.error--container h2 {
+    font-size: 2.8rem;
+}
+
+.error--container h2, .error--container p, .error--container a {
+    color: var(--text-color);
+}
+
+.error--container p {
+    font-size: 1.2rem;
+}
+
+.error--container a {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    .error--container  {
+        width: 400px;
+    }
+
+    .error--container  h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .error--container  {
+        width: 350px;
+    }
+
+    .error--container  h2 {
+        font-size: 2.2rem;
+    }
+}

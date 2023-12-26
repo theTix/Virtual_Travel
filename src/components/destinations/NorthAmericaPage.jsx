@@ -1,18 +1,17 @@
-//react
-import React from 'react';
-
-//style
-import "./../../styles/n-america.css";
-
-//images
-import newYork from "./../../assets/n-america/bow_bridge_new_york.jpg";
-import duluth from "./../../assets/n-america/duluth_mn_united_states.jpg";
-import sanFrancisco from "./../../assets/n-america/san_francisco.jpg";
-import ottawa from "./../../assets/n-america/ottawa_on_canada.jpg";
-import glendo from "./../../assets/n-america/glendo_wy_united_states.jpg";
-
 //components
 import AllCountries from './AllCountries';
+
+//assets
+//assets/n-america
+import duluth from "./../../assets/n-america/duluth_mn_united_states.jpg";
+import glendo from "./../../assets/n-america/glendo_wy_united_states.jpg";
+import newYork from "./../../assets/n-america/bow_bridge_new_york.jpg";
+import ottawa from "./../../assets/n-america/ottawa_on_canada.jpg";
+import sanFrancisco from "./../../assets/n-america/san_francisco.jpg";
+
+//styles
+//styles/destinations
+import "./../../styles/destinations/n-america.css";
 
 const NorthAmericaPage = () => {
   return (

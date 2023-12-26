@@ -1,8 +1,16 @@
-import React from 'react';
-import "../styles/fourth-section.css";
-import worldMap from "../assets/world-map2.png";
-import { RiFlagFill } from "react-icons/ri";
+//react-router-dom
 import { NavLink } from 'react-router-dom';
+
+//react icons
+import { RiFlagFill } from "react-icons/ri";
+
+//assets
+//assets(others)
+import worldMap from "../assets/world-map2.png";
+
+//styles
+//styles(others)
+import "../styles/fourth-section.css";
 
 const FourthSection = () => {
   return (

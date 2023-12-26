@@ -1,10 +1,11 @@
 //react
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 //react icons
 import { RiArrowRightDoubleLine } from "react-icons/ri";
 
 //styles
+//styles(others)
 import '../styles/second-section.css';
 
 const SecondSection = () => {

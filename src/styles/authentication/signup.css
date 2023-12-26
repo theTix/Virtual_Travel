@@ -26,15 +26,15 @@
     justify-content: center;
 }
 
-.sign-up-and-log-in--form > label, section {
+.sign-up-and-log-in--form label, .sign-up-and-log-in--form section {
     font-size: 1.2rem;
 }
 
-.sign-up-and-log-in--form form > label {
+.sign-up-and-log-in--form form label {
     margin-top: 20px;
 }
 
-.sign-up-and-log-in--form label > span {
+.sign-up-and-log-in--form label span {
     font-size: 1.2rem;
 }
 
@@ -59,7 +59,7 @@
     font-size: 1rem;
 }
 
-.sign-up-and-log-in--form > input, section {
+.sign-up-and-log-in--form input, .sign-up-and-log-in--form section {
     margin: 10px 0;
 }
 
@@ -92,11 +92,11 @@
     margin-right: 5px;
 }
 
-.instruction-note div > span {
+.instruction-note div span {
     margin-left: 2px;
 }
 
-.sign-up-and-log-in--form form > button {
+.sign-up-and-log-in--form form button {
     margin: 30px auto;
     padding: 12px;
     width: 200px;
