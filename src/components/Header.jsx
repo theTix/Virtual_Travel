@@ -1,11 +1,11 @@
 //react
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 
 //react-router-dom
 import { NavLink, Outlet } from 'react-router-dom';
 
 //react icons
-import { TbBaselineDensityMedium, TbDoorEnter, TbUserFilled } from "react-icons/tb";
+import { TbBaselineDensityMedium, TbDoorEnter, TbDoorExit, TbUserFilled } from "react-icons/tb";
 import { RiFacebookCircleFill, RiInstagramFill, RiPinterestFill, RiTwitterXFill, RiYoutubeFill } from "react-icons/ri";
 
 //components
@@ -16,9 +16,13 @@ import Navbar from './Navbar';
 //styles(others)
 import '../styles/header.css';
 
+//context
+import UserContext from '../context/userContext';
 
 const Header = () => {
     const [ menuContainer, setMenuContainer ] = useState("none");
+
+    const { username, setUsername } = useContext(UserContext);
     
     function handleClick() {
         setMenuContainer(menuContainer === "flex" ? "none" : "flex")
@@ -37,14 +41,29 @@ const Header = () => {
                 </nav>
                 <div className="header--menu-and-login">
                     <TbBaselineDensityMedium className='header--menu-icon' onClick={handleClick} />
-                    <NavLink className="header--login" to="login">
-                        <TbUserFilled />
-                        <a className="header--login-and-signup">Log In</a>
-                    </NavLink>
-                    <NavLink className="header--signup" to="signup">
-                        <TbDoorEnter />
-                        <a className="header--login-and-signup">Sign Up</a>
-                    </NavLink>
+                    {username === null ? (
+                        <>
+                            <NavLink className="header--login" to="login">
+                                <TbUserFilled />
+                                <a className="header--login-and-signup">Log In</a>
+                            </NavLink>
+                            <NavLink className="header--signup" to="signup">
+                                <TbDoorEnter />
+                                <a className="header--login-and-signup">Sign Up</a>
+                            </NavLink>
+                        </>
+                    ) : (
+                        <>
+                            <NavLink className="header--login">
+                                <TbUserFilled />
+                                <a className="header--login-and-signup">{username}</a>
+                            </NavLink>
+                            <NavLink className="header--signup" onClick={() => setUsername(null)} >
+                                <TbDoorExit />
+                                <a className="header--login-and-signup">Log out</a>
+                            </NavLink>
+                        </>
+                    )}
                 </div>
                 <Navbar menuContainer={menuContainer} setMenuContainer={setMenuContainer} handleClick={handleClick} />
             </div>

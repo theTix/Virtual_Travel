@@ -1,9 +1,11 @@
 //react
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 
 //react-router-dom
 import { NavLink } from "react-router-dom";
 
+//context
+import UserContext from "../../context/userContext";
 
 const LogIn = () => {
   const userRef = useRef();
@@ -12,6 +14,7 @@ const LogIn = () => {
   const [ pwd, setPwd] = useState("");
   const [ success, setSuccess ] = useState(false);
 
+  const {setUsername} = useContext(UserContext);
   useEffect(() => {
     userRef.current.focus();
   }, []);
@@ -19,6 +22,7 @@ const LogIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(user, pwd);
+    setUsername(user);
     setUser("");
     setPwd("");
     setSuccess(true);

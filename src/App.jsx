@@ -30,6 +30,10 @@ import ThirdPage from './components/ThirdPage';
 //style
 import './App.css';
 
+//context
+import UserContextProvider from './context/userContextProvider';
+
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Header />}>
@@ -53,7 +57,11 @@ const router = createBrowserRouter(
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <UserContextProvider>
+      <RouterProvider router={router}>
+        <Route />
+      </RouterProvider>
+    </UserContextProvider>
   )
 }
 
