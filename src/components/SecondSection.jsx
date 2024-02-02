@@ -1,5 +1,5 @@
 //react
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 
 //react icons
 import { RiArrowRightDoubleLine } from "react-icons/ri";
@@ -7,10 +7,13 @@ import { RiArrowRightDoubleLine } from "react-icons/ri";
 //styles
 //styles(others)
 import '../styles/second-section.css';
+import UserContext from '../context/userContext';
 
 const SecondSection = () => {
   const [ viewText, setViewText ] = useState(false);
   const [ animationName, setAnimationName ] = useState("rotateBackwards");
+
+  const { username } = useContext(UserContext);
 
   const handleClick = () => {
     setViewText((prevViewText) => !prevViewText);
@@ -22,6 +25,7 @@ const SecondSection = () => {
         <h2>About Us</h2>
         <div className="second-section--p-and-btn-container">
             <div className={`second-section--p-container ${viewText ? "show" : ""}`}>
+            {username === null ? <p>Hello!</p> : <p>Hello, {username}!</p>}
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas atque consequuntur voluptate error id voluptates unde excepturi sequi tempora quasi labore illum libero quis incidunt repudiandae accusamus, architecto eaque, similique aliquid suscipit reprehenderit corrupti molestias. Vitae consequatur odio quia iure!</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod id labore repellat deserunt distinctio temporibus, quasi voluptate esse saepe eaque voluptas totam molestiae architecto, iure deleniti earum amet a error incidunt voluptatibus optio aperiam nobis enim suscipit! Unde cupiditate, error obcaecati illo consequuntur corporis suscipit quam ea omnis, debitis provident.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt veniam saepe laboriosam perspiciatis quibusdam, assumenda neque excepturi sunt labore eveniet consequatur distinctio rem ducimus quisquam eius hic esse doloribus animi.

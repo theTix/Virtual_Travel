@@ -30,6 +30,11 @@
     text-align: justify;
 }
 
+.second-section--p-container p:first-of-type {
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
 .second-section--p-container-btn {
     display: flex;
     flex-direction: row;

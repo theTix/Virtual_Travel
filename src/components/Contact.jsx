@@ -1,5 +1,5 @@
 //react
-import { useEffect, useRef, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 
 //react-router-dom
 import { NavLink } from "react-router-dom";
@@ -8,6 +8,8 @@ import { NavLink } from "react-router-dom";
 //styles(others)
 import "./../styles/contact.css";
 
+//context
+import UserContext from "../context/userContext";
 
 const Contact = () => {
     const nameRef = useRef();
@@ -16,6 +18,8 @@ const Contact = () => {
     const [ email, setEmail ] = useState("");
     const [ message, setMessage ] = useState("");
     const [ success, setSuccess ] = useState(false);
+
+    const { username } = useContext(UserContext);
 
     useEffect(() => {
         nameRef.current.focus();
@@ -49,6 +53,7 @@ const Contact = () => {
                             autoComplete="off"
                             onChange={(e)=> setFullName(e.target.value)}
                             value={fullName}
+                            placeholder={username}
                             required
                         />
                         <label htmlFor="email">E-mail Address: </label>
