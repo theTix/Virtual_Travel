@@ -1,6 +1,5 @@
 //react
-import React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect, useReducer } from 'react';
 
 //react-router-dom
 import { NavLink } from 'react-router-dom';
@@ -25,13 +24,27 @@ import { timeData } from '../data/time.js';
 //styles(others)
 import '../styles/first-section.css';
 
+const INITIAL_STATE = {
+  currentTime: DateTime.local()
+}
+
+const reducer = (state, action) => {
+  switch(action.type) {
+    case "GET_TIME":
+      return {
+        currentTime: DateTime.local()
+      }
+    default:
+      return state;
+  }
+}
 
 const FirstSection = () => {
-  const [ currentTime, setCurrentTime ] = useState(DateTime.local());
+  const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
 
   useEffect(() => {
     const IntervalId = setInterval(() => {
-      setCurrentTime(DateTime.local());
+      dispatch({type: "GET_TIME"})
     }, 1000);
 
     return() => clearInterval(IntervalId);
@@ -64,7 +77,7 @@ const FirstSection = () => {
                 timeData.map(location => (
                   <SwiperSlide className='first-section--swiper-slide' key={location.id}>
                     <h1>{location.city}</h1>
-                    <p>{currentTime.setZone(location.place).toFormat("HH:mm:ss")}</p>
+                    <p>{state.currentTime.setZone(location.place).toFormat("HH:mm:ss")}</p>
                   </SwiperSlide>
                 ))
               }

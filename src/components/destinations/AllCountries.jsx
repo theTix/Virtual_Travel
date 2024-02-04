@@ -1,5 +1,5 @@
 //react
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useReducer } from 'react';
 
 //react icons
 import { RiArrowRightDoubleLine } from "react-icons/ri";
@@ -11,11 +11,33 @@ import { getAllCountriesByContinent } from '../../data/countries';
 //styles/destinations
 import "./../../styles/destinations/all-countries.css";
 
+const INITIAL_STATE = {
+  isOpen: false,
+  countries: []
+}
+
+const reducer = (state, action) => {
+  switch(action.type) {
+    case "handleBtn":
+      return {
+        ...state,
+        isOpen: !state.isOpen
+      }
+    case "GET_COUNTRIES": 
+      return {
+        ...state,
+        countries: action.payload.countries
+      }
+    default:
+      return state;
+  }
+}
+
 const Country = ({ country }) => {
-  const [ isOpen, setIsOpen ] = useState(false);
+  const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
 
   const handleButtonClick = () => {
-    setIsOpen(!isOpen);
+    dispatch({type: "handleBtn"})
   }
 
   const handleFlagClick = () => {
@@ -26,7 +48,7 @@ const Country = ({ country }) => {
     <div className='country-box'>
       <span className='country-box-flag' onClick={handleFlagClick}>{country.flag}</span>
       <h4>{country.name.common}</h4>
-      <div className={`country-box-languages ${isOpen ? "open" : "close"}`}>
+      <div className={`country-box-languages ${state.isOpen ? "open" : "close"}`}>
         {
           Object.values(country.languages).map((lang, index) => (
             <span className='country-box-languages-all' key={index}>{lang}</span>
@@ -36,7 +58,7 @@ const Country = ({ country }) => {
       {
         Object.values(country.languages).length > 3 && (
           <button className="country-box-button" onClick={handleButtonClick}>
-            <RiArrowRightDoubleLine className={`country-box-button-icon ${isOpen ? "btn-open" : "btn-close"}`} />
+            <RiArrowRightDoubleLine className={`country-box-button-icon ${state.isOpen ? "btn-open" : "btn-close"}`} />
           </button>
         )
       }
@@ -46,11 +68,11 @@ const Country = ({ country }) => {
 }
 
 const AllCountries = ({ continentCode }) => {
-  const [ countries, setCountries ] = useState([]);
+  const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
 
   useEffect(() => {
     getAllCountriesByContinent(continentCode)
-      .then(countries => setCountries(countries))
+      .then(countries => dispatch({type: "GET_COUNTRIES", payload: {countries}}))
       .catch(error => console.log("Error: ", error));
   }, [continentCode]);
   return (
@@ -58,7 +80,7 @@ const AllCountries = ({ continentCode }) => {
       <h2>Countries in {continentCode}</h2>
       <div className="all-countries--container">
         {
-          countries.map((country) => (
+          state.countries.map((country) => (
             <Country key={country.cca3} country={country} />
           ))
         }

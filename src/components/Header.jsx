@@ -1,5 +1,5 @@
 //react
-import { useState } from 'react';
+import { useReducer } from 'react';
 
 //react-router-dom
 import { NavLink, Outlet } from 'react-router-dom';
@@ -16,12 +16,28 @@ import Navbar from './Navbar';
 //styles(others)
 import '../styles/header.css';
 
+const INITIAL_STATE = {
+    menuContainer: "none"
+}
+
+const reducer = (state, action) => {
+    switch(action.type) {
+        case "SHOW_MENU": 
+            return {
+                menuContainer: "flex"
+            }
+        case "CLOSE_MENU":
+            return {
+                menuContainer: "none"
+            }
+    }
+}
 
 const Header = () => {
-    const [ menuContainer, setMenuContainer ] = useState("none");
+    const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
     
-    function handleClick() {
-        setMenuContainer(menuContainer === "flex" ? "none" : "flex")
+    function handleClick(e) {
+        dispatch(state.menuContainer === "flex" ? {type: "CLOSE_MENU"} : {type: "SHOW_MENU"})
       }
   return (
     <>
@@ -46,7 +62,7 @@ const Header = () => {
                         <a className="header--login-and-signup">Sign Up</a>
                     </NavLink>
                 </div>
-                <Navbar menuContainer={menuContainer} setMenuContainer={setMenuContainer} handleClick={handleClick} />
+                <Navbar menuContainer={state.menuContainer} handleClick={handleClick} />
             </div>
         </div>
 

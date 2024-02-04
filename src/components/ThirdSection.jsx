@@ -1,5 +1,5 @@
 //react
-import { useState } from 'react';
+import { useReducer } from 'react';
 
 //react icons
 import { RiArrowRightDoubleLine } from "react-icons/ri";
@@ -11,22 +11,60 @@ import { people } from "../data/people.js";
 //styles(others)
 import '../styles/third-section.css';
 
+const INITIAL_STATE = {
+  clickedIndex: Array(people.length).fill("closed"),
+  animationNames: Array(people.length).fill("btn-close")
+}
+
+const reducer = (state, action) => {
+  switch(action.type) {
+    case "OPEN_TEXT":
+      return {
+        ...state,
+        clickedIndex: [
+          ...state.clickedIndex.slice(0, action.payload.index),
+          "opened",
+          ...state.clickedIndex.slice(action.payload.index + 1)
+        ]
+      }
+    case "CLOSE_TEXT":
+      return {
+        ...state,
+        clickedIndex: [
+          ...state.clickedIndex.slice(0, action.payload.index),
+          "closed",
+          ...state.clickedIndex.slice(action.payload.index + 1)
+        ]
+      }
+    case "OPEN_ANIMATION":
+      return {
+        ...state,
+        animationNames: [
+          ...state.animationNames.slice(0, action.payload.index),
+          "btn-open",
+          ...state.animationNames.slice(action.payload.index + 1)
+        ]
+      }
+    case "CLOSE_ANIMATION":
+      return {
+        ...state,
+        animationNames: [
+          ...state.animationNames.slice(0, action.payload.index),
+          "btn-close",
+          ...state.animationNames.slice(action.payload.index + 1)
+        ]
+      }
+    default:
+      return state;
+  }
+}
+
 const ThirdSection = () => {
-  const [ clickedIndex, setClickedIndex ] = useState(Array(people.length).fill("closed"));
-  const [ animationNames, setAnimationNames ] = useState(Array(people.length).fill("btn-close"));
+const [ state, dispatch ] = useReducer(reducer, INITIAL_STATE);
 
   const handleBtn = (index) => {
-    setClickedIndex((prevClickedIndex) => {
-      const newClickedIndex = [...prevClickedIndex];
-      newClickedIndex[index] = prevClickedIndex[index] === "opened" ? "closed" : "opened";
-      return newClickedIndex;
-    });
-
-    setAnimationNames((prevAnimationNames) => {
-      const newAnimationNames = [...prevAnimationNames];
-      newAnimationNames[index] = prevAnimationNames[index] === "btn-close" ? "btn-open" : "btn-close";
-      return newAnimationNames;
-    });
+    dispatch(state.clickedIndex[index] === "closed" ? {type:"OPEN_TEXT", payload: {index}} : {type: "CLOSE_TEXT", payload: {index}});
+    dispatch(state.animationNames[index] === "btn-close" ? {type: "OPEN_ANIMATION", payload: {index}} : {type: "CLOSE_ANIMATION", payload: {index}});
   };
 
   return (
@@ -40,10 +78,10 @@ const ThirdSection = () => {
                 <img src={person.image} alt={person.name} />
                 <div className="third-section--people-container-box-text">
                   <h3>{person.name}</h3>
-                  <p className={`${clickedIndex[index]}`}>{person.about}</p>
+                  <p className={`${state.clickedIndex[index]}`}>{person.about}</p>
                 </div>
                 <button className='third-section--people-container-box-btn' onClick={() => handleBtn(index)}>
-                  <RiArrowRightDoubleLine className={`third-section--people-container-box-btn-icon ${animationNames[index]}`} />
+                  <RiArrowRightDoubleLine className={`third-section--people-container-box-btn-icon ${state.animationNames[index]}`} />
                 </button>
               </div>
             ))

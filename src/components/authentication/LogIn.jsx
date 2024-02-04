@@ -1,32 +1,53 @@
 //react
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useReducer, useRef} from "react";
 
 //react-router-dom
 import { NavLink } from "react-router-dom";
 
+const INITIAL_STATE = {
+  user: "",
+  pwd: "",
+  success: false
+};
+
+const reducer = (state, action) => {
+  switch(action.type) {
+    case "CHANGE_INPUT":
+      return {
+        ...state,
+        [action.payload.name]: action.payload.value
+      }
+    case "SUBMIT_INFO": 
+      return {
+        [action.payload.name]: action.payload.value,
+        success: true
+    }
+    default:
+      return state;
+  }
+}
 
 const LogIn = () => {
   const userRef = useRef();
 
-  const [ user, setUser ] = useState("");
-  const [ pwd, setPwd] = useState("");
-  const [ success, setSuccess ] = useState(false);
+  const [ state, dispatch ] = useReducer(reducer, INITIAL_STATE);
 
   useEffect(() => {
     userRef.current.focus();
   }, []);
 
+  const handleChange = e => {
+    dispatch({type: "CHANGE_INPUT", payload: {name: e.target.name, value: e.target.value}})
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(user, pwd);
-    setUser("");
-    setPwd("");
-    setSuccess(true);
+    dispatch({type: "SUBMIT_INFO", payload: {name: e.target.name, value: ""}});
   }
 
   return (
     <div className="sign-up-and-log-in--background">
-      {success ? (
+      {state.success ? (
         <div className="sign-up-and-log-in--success">
           <h1>You are logged in!</h1>
           <br />
@@ -46,8 +67,8 @@ const LogIn = () => {
               id="username" 
               ref={userRef}
               autoComplete="off"
-              onChange={(e) => setUser(e.target.value)}
-              value={user}
+              onChange={handleChange}
+              name="user"
               required
             />
             <label htmlFor="password">
@@ -56,8 +77,8 @@ const LogIn = () => {
             <input 
               type="password" 
               id="password" 
-              onChange={(e) => setPwd(e.target.value)}
-              value={pwd}
+              onChange={handleChange}
+              name="pwd"
               required
             />
 
