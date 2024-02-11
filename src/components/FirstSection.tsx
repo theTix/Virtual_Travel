@@ -26,8 +26,8 @@ import { timeData } from '../data/time.js';
 import '../styles/first-section.css';
 
 
-const FirstSection = () => {
-  const [ currentTime, setCurrentTime ] = useState(DateTime.local());
+const FirstSection: React.FC = () => {
+  const [ currentTime, setCurrentTime ] = useState<DateTime>(DateTime.local());
 
   useEffect(() => {
     const IntervalId = setInterval(() => {

@@ -1,5 +1,5 @@
 //react
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 //react-router-dom
 import { NavLink } from 'react-router-dom';
@@ -11,13 +11,16 @@ import { TbBaselineDensityMedium } from "react-icons/tb";
 //styles(others)
 import '../styles/navbar.css';
 
-const Navbar = ({ menuContainer, handleClick }) => {
+export type MenuContainer = "flex" | "none";
+
+type NavbarProps = {
+  menuContainer: MenuContainer,
+  handleClick: () => void
+}
+
+const Navbar: React.FC<NavbarProps> = ({ menuContainer = "none", handleClick }) => {
   useEffect(() => {
-    if(menuContainer === "flex") {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+      document.body.style.overflow = menuContainer === "flex" ? "hidden" : "auto";
 
     return() => {
       document.body.style.overflow = "auto";

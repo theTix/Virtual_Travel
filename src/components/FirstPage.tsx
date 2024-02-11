@@ -9,7 +9,7 @@ import FirstSection from './FirstSection';
 //styles(others)
 import '../styles/first-page.css';
 
-const FirstPage = () => {
+const FirstPage: React.FC = () => {
   return (
     <div className="bg-color1">
         <FirstSection />

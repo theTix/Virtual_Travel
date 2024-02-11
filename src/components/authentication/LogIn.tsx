@@ -1,22 +1,23 @@
 //react
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 //react-router-dom
 import { NavLink } from "react-router-dom";
 
 
-const LogIn = () => {
-  const userRef = useRef();
+const LogIn: React.FC = () => {
+  const userRef = useRef<HTMLInputElement>(null);
 
   const [ user, setUser ] = useState("");
   const [ pwd, setPwd] = useState("");
   const [ success, setSuccess ] = useState(false);
 
   useEffect(() => {
-    userRef.current.focus();
+    if(userRef.current)
+      userRef.current.focus();
   }, []);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(user, pwd);
     setUser("");

@@ -1,5 +1,5 @@
 //react
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 //react icons
 import { RiArrowRightDoubleLine } from "react-icons/ri";
@@ -11,11 +11,18 @@ import { people } from "../data/people.js";
 //styles(others)
 import '../styles/third-section.css';
 
-const ThirdSection = () => {
+interface Person {
+  id: number,
+  image: string,
+  name: string,
+  about: string
+}
+
+const ThirdSection: React.FC = () => {
   const [ clickedIndex, setClickedIndex ] = useState(Array(people.length).fill("closed"));
   const [ animationNames, setAnimationNames ] = useState(Array(people.length).fill("btn-close"));
 
-  const handleBtn = (index) => {
+  const handleBtn = (index: number) => {
     setClickedIndex((prevClickedIndex) => {
       const newClickedIndex = [...prevClickedIndex];
       newClickedIndex[index] = prevClickedIndex[index] === "opened" ? "closed" : "opened";
@@ -35,7 +42,7 @@ const ThirdSection = () => {
         <h2>People behind Virtual Travel</h2>
         <div className="third-section--people-container">
           {
-            people.map((person, index) => (
+            people.map((person: Person, index: number) => (
               <div className="third-section--people-container-box" key={person.id}>
                 <img src={person.image} alt={person.name} />
                 <div className="third-section--people-container-box-text">

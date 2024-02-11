@@ -1,5 +1,5 @@
 //react
-import { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 
 //react-router-dom
 import { NavLink } from "react-router-dom";
@@ -9,8 +9,8 @@ import { NavLink } from "react-router-dom";
 import "./../styles/contact.css";
 
 
-const Contact = () => {
-    const nameRef = useRef();
+const Contact: React.FC = () => {
+    const nameRef = useRef<HTMLInputElement>(null);
 
     const [ fullName, setFullName ] = useState("");
     const [ email, setEmail ] = useState("");
@@ -18,10 +18,11 @@ const Contact = () => {
     const [ success, setSuccess ] = useState(false);
 
     useEffect(() => {
-        nameRef.current.focus();
+        if(nameRef.current)
+            nameRef.current.focus();
     }, []);
 
-    const handleSubmit = async(e) => {
+    const handleSubmit = async(e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log(fullName, email, message);
         setFullName("");
@@ -60,7 +61,7 @@ const Contact = () => {
                             required
                         />
                         <label htmlFor="contact-message">Message: </label>
-                        <textarea name="contact-message" id="contact-message" cols="30" rows="2"></textarea>
+                        <textarea name="contact-message" id="contact-message" cols={30} rows={2}></textarea>
                         <button className="btn-contact">Send</button>
                     </form>
                 </div>

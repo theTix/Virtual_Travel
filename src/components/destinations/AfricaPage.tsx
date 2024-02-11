@@ -1,31 +1,34 @@
+//react
+import React from 'react';
+
 //components
 //components/destinations
 import AllCountries from './AllCountries';
 
 //assets
-//assets/europe
-import czechia from "./../../assets/europe/prague_czechia.jpg";
-import france from "./../../assets/europe/paris_france.jpg";
-import germany from "./../../assets/europe/gablenz_germany.jpg";
-import greece from "./../../assets/europe/greece.jpg";
-import italy from "./../../assets/europe/roma_lazio_italy.jpg";
+//assets/africa
+import egypt from "./../../assets/africa/al_wahat_al_dakhla_desert_new_valley_governorate_egypt.jpg";
+import morocco from "./../../assets/africa/chefchaouen_tangier-tétouan-al_hoceima_morocco.jpg";
+import southAfrica from "./../../assets/africa/cape_town_wc_south_africa.jpg";
+import southAfrica2 from "./../../assets/africa/mpumalanga_kzn_south_africa.jpg";
+import tanzania from "./../../assets/africa/tanzania.jpg";
 
 //styles
 //styles/destinations
-import "./../../styles/destinations/europe.css";
+import "./../../styles/destinations/africa.css";
 
-const EuropePage = () => {
+const AfricaPage: React.FC = () => {
   return (
     <div className='destination-mark--container'>
-      <div className="destination-mark--first-section" id='europe--first-section'>
-        <img src={germany} alt="Devil's Bridge in Kromlau, Germany" />
-        <h2>Europe</h2>
+      <div className="destination-mark--first-section" id='africa--first-section'>
+        <img src={southAfrica} alt="" />
+        <h2>Africa</h2>
       </div>
 
-      <div className="destination-mark--second-section" id='europe--second-section'>
+      <div className="destination-mark--second-section" id='africa--second-section'>
         <div className="destination-mark--second-section-row">
           <div className="destination-mark--second-section-image">
-            <img src={greece} alt="Landscape View of Greece during Day Time" />
+            <img src={southAfrica2} alt="Photo Of Waterfalls During Daytime in Mpumalanga, KwaZulu-Natal" />
           </div>
           <div className="destination-mark--second-section-text">
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis tempora enim eligendi nostrum perspiciatis voluptatem perferendis cupiditate optio, quo, minus odio? Sunt quasi doloremque est quas rem dignissimos reiciendis eum nobis alias quod, earum esse iure neque aliquam repudiandae quos?</p>
@@ -38,10 +41,10 @@ const EuropePage = () => {
 
         <div className="destination-mark--second-section-row">
           <div className="destination-mark--second-section-image">
-            <img src={italy} alt="Photography Of Lighted Bridge in Rome, Italy" />
+            <img src={morocco} alt="Narrow Alley in Morocco" />
           </div>
           <div className="destination-mark--second-section-image">
-            <img src={czechia} alt="Red Tram Passing Between Concrete Buildings in Prague, Czechia" />
+            <img src={egypt} alt="Photo Of Camels in Desert in Egypt" />
           </div>
         </div>
 
@@ -54,17 +57,17 @@ const EuropePage = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ad ex a dolore sit odit, culpa quod delectus maxime minima! Quia sint doloribus sit eligendi eum aut ad, quidem a dolorem blanditiis ab, praesentium natus fugiat quos qui quasi! Distinctio.</p>
           </div>
           <div className="destination-mark--second-section-image">
-            <img src={france} alt="Low-angle Photography of Eiffel Tower in Paris, France" />
+            <img src={tanzania} alt="Road in Tanzania" />
           </div>
         </div>
 
         
         <div className="destination-mark--second-section-row-divider"></div>
 
-        <AllCountries continentCode={"Europe"} />
+        <AllCountries continentCode={"Africa"} />
       </div>
     </div>
   )
 }
 
-export default EuropePage
+export default AfricaPage

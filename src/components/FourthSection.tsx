@@ -1,3 +1,6 @@
+//react
+import React from 'react';
+
 //react-router-dom
 import { NavLink } from 'react-router-dom';
 
@@ -12,7 +15,7 @@ import worldMap from "../assets/world-map2.png";
 //styles(others)
 import "../styles/fourth-section.css";
 
-const FourthSection = () => {
+const FourthSection: React.FC = () => {
   return (
     <div className='fourth-section--container'>
         <h3>Select Your Travel Destination</h3>

@@ -1,5 +1,5 @@
 //react
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 //react-router-dom
 import { NavLink } from "react-router-dom";
@@ -15,8 +15,8 @@ const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
 const SignUp = () => {
-    const userRef = useRef();
-    const errMsgRef = useRef();
+    const userRef = useRef<HTMLInputElement>(null);
+    const errMsgRef = useRef<HTMLInputElement>(null);
 
     const [ user, setUser ] = useState("");
     const [ validName, setValidName ] = useState(false);
@@ -35,7 +35,8 @@ const SignUp = () => {
 
 
     useEffect(() => {
-        userRef.current.focus();
+        if(userRef.current)
+            userRef.current.focus();
     }, []);
 
     useEffect(() => {
@@ -58,11 +59,12 @@ const SignUp = () => {
         setErrMsg("");
     }, [ user, pwd, matchPwd ]);
 
-    function handleDisabledClick(event) {
-        event.preventDefault();
+    const handleDisabledClick: React.MouseEventHandler<HTMLButtonElement> = (e) => {
+        e.preventDefault();
+        return false;
     }
-
-    const handleSubmit = async (e) => {
+    
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         //check again in case someone hacks the button to enabled
         const v1 = USER_REGEX.test(user);
@@ -167,8 +169,7 @@ const SignUp = () => {
                 <button 
                     disabled={!validName || !validPwd || !validMatch ? true : false} 
                     aria-disabled={!validName || !validPwd || !validMatch ? true : false}
-                    onClick={!validName || !validPwd || !validMatch ? handleDisabledClick : ""}
-                    onKeyPress={!validName || !validPwd || !validMatch ? handleDisabledClick : ""}
+                    onClick={!validName || !validPwd || !validMatch ? handleDisabledClick : undefined}
                     className={!validName || !validPwd || !validMatch ? "btn-disabled" : "btn-enabled"}
                 >Sign Up</button>
             </form>

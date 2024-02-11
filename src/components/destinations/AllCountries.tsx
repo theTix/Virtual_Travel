@@ -7,11 +7,18 @@ import { RiArrowRightDoubleLine } from "react-icons/ri";
 //data
 import { getAllCountriesByContinent } from '../../data/countries';
 
+//types
+import { CountryData } from '../../../types/countries';
+
 //styles
 //styles/destinations
 import "./../../styles/destinations/all-countries.css";
 
-const Country = ({ country }) => {
+interface CountryProps {
+  country: CountryData
+}
+
+const Country: React.FC<CountryProps> = ({ country }) => {
   const [ isOpen, setIsOpen ] = useState(false);
 
   const handleButtonClick = () => {
@@ -24,7 +31,7 @@ const Country = ({ country }) => {
 
   return (
     <div className='country-box'>
-      <span className='country-box-flag' onClick={handleFlagClick}>{country.flag}</span>
+      <img className='country-box-flag' src={country.flag} onClick={handleFlagClick} alt='Flag' />
       <h4>{country.name.common}</h4>
       <div className={`country-box-languages ${isOpen ? "open" : "close"}`}>
         {
@@ -45,8 +52,12 @@ const Country = ({ country }) => {
   )
 }
 
-const AllCountries = ({ continentCode }) => {
-  const [ countries, setCountries ] = useState([]);
+interface CountriesProps {
+  continentCode: string
+}
+
+const AllCountries: React.FC<CountriesProps> = ({ continentCode }) => {
+  const [ countries, setCountries ] = useState<CountryData[]>([]);
 
   useEffect(() => {
     getAllCountriesByContinent(continentCode)

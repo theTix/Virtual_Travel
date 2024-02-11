@@ -1,31 +1,33 @@
+//react
+import React from 'react';
+
 //components
-//components/destinations
 import AllCountries from './AllCountries';
 
 //assets
-//assets/s-america
-import chile from "./../../assets/s-america/magallanes_and_chilean_antarctica_chile.jpg";
-import colombia from "./../../assets/s-america/guatapé_antioquia_colombia.jpg";
-import colombia2 from "./../../assets/s-america/medellín_antioquia_colombia.jpg";
-import peru from "./../../assets/s-america/puno_peru.jpg";
-import uruguay from "./../../assets/s-america/punta_del_este_maldonado_department_uruguay.jpg";
+//assets/n-america
+import duluth from "./../../assets/n-america/duluth_mn_united_states.jpg";
+import glendo from "./../../assets/n-america/glendo_wy_united_states.jpg";
+import newYork from "./../../assets/n-america/bow_bridge_new_york.jpg";
+import ottawa from "./../../assets/n-america/ottawa_on_canada.jpg";
+import sanFrancisco from "./../../assets/n-america/san_francisco.jpg";
 
 //styles
 //styles/destinations
-import "./../../styles/destinations/s-america.css";
+import "./../../styles/destinations/n-america.css";
 
-const SouthAmericaPage = () => {
+const NorthAmericaPage: React.FC = () => {
   return (
     <div className='destination-mark--container'>
-      <div className="destination-mark--first-section" id='s-america--first-section'>
-        <img src={chile} alt="Gray Rocky Mountain Under the Blue Sky in Chile" />
-        <h2>South America</h2>
+      <div className="destination-mark--first-section" id='n-america--first-section'>
+        <img src={newYork} alt="Bow Bridge in New York" />
+        <h2>North America</h2>
       </div>
 
-      <div className="destination-mark--second-section" id='s-america--second-section'>
+      <div className="destination-mark--second-section" id='n-america--second-section'>
         <div className="destination-mark--second-section-row">
           <div className="destination-mark--second-section-image">
-            <img src={uruguay} alt="Bird's-eye View of the City of Punta del Este in Uruguay" />
+            <img src={duluth} alt="The Streets of Duluth" />
           </div>
           <div className="destination-mark--second-section-text">
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis tempora enim eligendi nostrum perspiciatis voluptatem perferendis cupiditate optio, quo, minus odio? Sunt quasi doloremque est quas rem dignissimos reiciendis eum nobis alias quod, earum esse iure neque aliquam repudiandae quos?</p>
@@ -38,10 +40,10 @@ const SouthAmericaPage = () => {
 
         <div className="destination-mark--second-section-row">
           <div className="destination-mark--second-section-image">
-            <img src={colombia} alt="White Clouds above the Town of Guatapé in Colombia" />
+            <img src={sanFrancisco} alt="The Streets of San Francisco" />
           </div>
           <div className="destination-mark--second-section-image">
-            <img src={colombia2} alt="Aerial View of Medellín city during Night Time in Colombia" />
+            <img src={glendo} alt="Sunset in Glendo" />
           </div>
         </div>
 
@@ -54,17 +56,17 @@ const SouthAmericaPage = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ad ex a dolore sit odit, culpa quod delectus maxime minima! Quia sint doloribus sit eligendi eum aut ad, quidem a dolorem blanditiis ab, praesentium natus fugiat quos qui quasi! Distinctio.</p>
           </div>
           <div className="destination-mark--second-section-image">
-            <img src={peru} alt="Brown Wooden Boat on Water in Peru" />
+            <img src={ottawa} alt="Parliament Hill in Ottawa" />
           </div>
         </div>
 
         
         <div className="destination-mark--second-section-row-divider"></div>
 
-        <AllCountries continentCode={"South America"} />
+        <AllCountries continentCode={"North America"} />
       </div>
     </div>
   )
 }
 
-export default SouthAmericaPage
+export default NorthAmericaPage

@@ -1,9 +1,12 @@
+//react
+import React from 'react';
+
 //components
 //components(others)
 import FourthSection from './FourthSection';
 
 
-const ThirdPage = () => {
+const ThirdPage: React.FC = () => {
   return (
     <div>
         <FourthSection />

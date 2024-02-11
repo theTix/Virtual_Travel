@@ -44,7 +44,9 @@
 }
 
 .country-box-flag {
-    font-size: 3rem;
+    height: 40px;
+    width: 65px;
+    margin: 10px 0;
 }
 
 .country-box h4 {

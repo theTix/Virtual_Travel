@@ -1,3 +1,6 @@
+//react
+import React from 'react';
+
 //react-router-dom
 import { NavLink } from "react-router-dom";
 
@@ -5,7 +8,7 @@ import { NavLink } from "react-router-dom";
 //styles(others)
 import "./../styles/error.css";
 
-const ErrorPage = () => {
+const ErrorPage: React.FC = () => {
   return (
     <div className="error--page">
       <div className="error--container">

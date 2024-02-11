@@ -1,5 +1,5 @@
 //react
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 //react-router-dom
 import { NavLink, Outlet } from 'react-router-dom';
@@ -10,17 +10,17 @@ import { RiFacebookCircleFill, RiInstagramFill, RiPinterestFill, RiTwitterXFill,
 
 //components
 //components(others)
-import Navbar from './Navbar';
+import Navbar, {MenuContainer} from './Navbar';
 
 //styles
 //styles(others)
 import '../styles/header.css';
 
 
-const Header = () => {
-    const [ menuContainer, setMenuContainer ] = useState("none");
+const Header: React.FC = () => {
+    const [ menuContainer, setMenuContainer ] = useState<MenuContainer>("none");
     
-    function handleClick() {
+    const handleClick: () => void = () => {
         setMenuContainer(menuContainer === "flex" ? "none" : "flex")
       }
   return (
@@ -46,7 +46,7 @@ const Header = () => {
                         <a className="header--login-and-signup">Sign Up</a>
                     </NavLink>
                 </div>
-                <Navbar menuContainer={menuContainer} setMenuContainer={setMenuContainer} handleClick={handleClick} />
+                <Navbar menuContainer={menuContainer} handleClick={handleClick} />
             </div>
         </div>
 

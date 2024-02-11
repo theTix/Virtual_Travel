@@ -1,30 +1,34 @@
+//react
+import React from 'react';
+
 //components
+//components/destinations
 import AllCountries from './AllCountries';
 
 //assets
-//assets/n-america
-import duluth from "./../../assets/n-america/duluth_mn_united_states.jpg";
-import glendo from "./../../assets/n-america/glendo_wy_united_states.jpg";
-import newYork from "./../../assets/n-america/bow_bridge_new_york.jpg";
-import ottawa from "./../../assets/n-america/ottawa_on_canada.jpg";
-import sanFrancisco from "./../../assets/n-america/san_francisco.jpg";
+//assets/oceania
+import australia from "./../../assets/oceania/north_bondi_nsw_australia.jpg";
+import australia2 from "./../../assets/oceania/bondi_beach_nsw_australia.jpg";
+import australia3 from "./../../assets/oceania/sydney_australia.jpg";
+import frenchPolynesia from "./../../assets/oceania/moorea_maiao_windward_islands,_french_polynesia.jpg";
+import samoa from "./../../assets/oceania/apia_upolu_samoa.jpg";
 
 //styles
 //styles/destinations
-import "./../../styles/destinations/n-america.css";
+import "./../../styles/destinations/oceania.css";
 
-const NorthAmericaPage = () => {
+const OceaniaPage: React.FC = () => {
   return (
     <div className='destination-mark--container'>
-      <div className="destination-mark--first-section" id='n-america--first-section'>
-        <img src={newYork} alt="Bow Bridge in New York" />
-        <h2>North America</h2>
+      <div className="destination-mark--first-section" id='oceania--first-section'>
+        <img src={frenchPolynesia} alt="White Clouds above Mount Rotui in French Polynesia" />
+        <h2>Oceania</h2>
       </div>
 
-      <div className="destination-mark--second-section" id='n-america--second-section'>
+      <div className="destination-mark--second-section" id='oceania--second-section'>
         <div className="destination-mark--second-section-row">
           <div className="destination-mark--second-section-image">
-            <img src={duluth} alt="The Streets of Duluth" />
+            <img src={australia} alt="Aerial Photo of Bondi Beach in Australia" />
           </div>
           <div className="destination-mark--second-section-text">
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis tempora enim eligendi nostrum perspiciatis voluptatem perferendis cupiditate optio, quo, minus odio? Sunt quasi doloremque est quas rem dignissimos reiciendis eum nobis alias quod, earum esse iure neque aliquam repudiandae quos?</p>
@@ -37,10 +41,10 @@ const NorthAmericaPage = () => {
 
         <div className="destination-mark--second-section-row">
           <div className="destination-mark--second-section-image">
-            <img src={sanFrancisco} alt="The Streets of San Francisco" />
+            <img src={australia2} alt="Bird's Eye View Of Cropland During Daytime in Australia" />
           </div>
           <div className="destination-mark--second-section-image">
-            <img src={glendo} alt="Sunset in Glendo" />
+            <img src={australia3} alt="View of Harbour Bridge In Sydney, Australia" />
           </div>
         </div>
 
@@ -53,17 +57,17 @@ const NorthAmericaPage = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque ad ex a dolore sit odit, culpa quod delectus maxime minima! Quia sint doloribus sit eligendi eum aut ad, quidem a dolorem blanditiis ab, praesentium natus fugiat quos qui quasi! Distinctio.</p>
           </div>
           <div className="destination-mark--second-section-image">
-            <img src={ottawa} alt="Parliament Hill in Ottawa" />
+            <img src={samoa} alt="View of the Beach in Samoa" />
           </div>
         </div>
 
         
         <div className="destination-mark--second-section-row-divider"></div>
 
-        <AllCountries continentCode={"North America"} />
+        <AllCountries continentCode={"Oceania"} />
       </div>
     </div>
   )
 }
 
-export default NorthAmericaPage
+export default OceaniaPage

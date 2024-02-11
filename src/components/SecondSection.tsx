@@ -1,5 +1,5 @@
 //react
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 //react icons
 import { RiArrowRightDoubleLine } from "react-icons/ri";
@@ -8,13 +8,13 @@ import { RiArrowRightDoubleLine } from "react-icons/ri";
 //styles(others)
 import '../styles/second-section.css';
 
-const SecondSection = () => {
+const SecondSection: React.FC = () => {
   const [ viewText, setViewText ] = useState(false);
   const [ animationName, setAnimationName ] = useState("rotateBackwards");
 
-  const handleClick = () => {
-    setViewText((prevViewText) => !prevViewText);
-    setAnimationName((prevAnimationName) => prevAnimationName === "rotateForwards" ? "rotateBackwards" : "rotateForwards");
+  const handleClick: () => void = () => {
+    setViewText((prevViewText: boolean) => !prevViewText);
+    setAnimationName((prevAnimationName: string) => prevAnimationName === "rotateForwards" ? "rotateBackwards" : "rotateForwards");
   }
 
   return (
