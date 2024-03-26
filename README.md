@@ -20,43 +20,43 @@ User can also read about creators on About page, fill out a form on Contact page
 
 ### Attributions
 
-girl.jpg - Photo by Andrea Piacquadio from Pexels: https://www.pexels.com/photo/freckled-face-3763188/
-guy.jpg - Photo by Creation Hill from Pexels: https://www.pexels.com/photo/man-in-red-jacket-1681010/
-landscape-blur - Photo by Pixabay from Pexels: https://www.pexels.com/photo/mirror-lake-reflecting-wooden-house-in-middle-of-lake-overlooking-mountain-ranges-147411/
-mountains.jpg - Photo by Marco Milanesi from Pexels: https://www.pexels.com/photo/stars-on-clear-night-sky-in-dolomites-17803932/
-plane-departure3-blurred - Photo by Christine Renard from Pexels: https://www.pexels.com/photo/window-view-of-airplane-615060/
-world.jpg - Photo by Pixabay from Pexels: https://www.pexels.com/photo/black-textile-41949/
-al_wahat_al_dakhla_desert_new_valley_governorate_egypt.jpg - Photo by Taryn Elliott from Pexels: https://www.pexels.com/photo/photo-of-camels-on-dessert-3889891/
-chefchaouen_tangier-tétouan-al_hoceima_morocco.jpg - Photo by Mark Neal from Pexels: https://www.pexels.com/photo/narrow-alley-3061496/
-cape_town_wc_south_africa.jpg - Photo by Arthur Brognoli from Pexels: https://www.pexels.com/photo/person-standing-across-body-of-water-2327413/
-mpumalanga_kzn_south_africa.jpg - Photo by Taryn Elliott from Pexels: https://www.pexels.com/photo/photo-of-waterfalls-during-daytime-3889927/
-tanzania.jpg - Photo by Pepe Caspers from Pexels: https://www.pexels.com/photo/photo-of-dirt-road-across-hill-under-cloudy-sky-3581847/
-gazibo.jpg - Photo by Loifotos from Pexels: https://www.pexels.com/photo/asian-style-gazebo-near-plants-1660891/
-tokyo_japan.jpg - Photo by Sunil Poudel from Pexels: https://www.pexels.com/photo/beige-and-brown-temple-2758567/
-incheon_south_korea.jpg - Photo by Harry Cunningham @harry.digital from Pexels: https://www.pexels.com/photo/brown-and-red-wooden-house-3405486/
-thailand.jpg - Photo by Oleksandr P from Pexels: https://www.pexels.com/photo/woman-wearing-blue-dress-with-umbrella-during-sunset-2070485/
-dong_da_ha_noi_vietnam.jpg - Photo by Flo Dahm from Pexels: https://www.pexels.com/photo/people-sitting-on-sidewalk-1483778/
-landscape-focus-blur - Photo by Riccardo from Pexels: https://www.pexels.com/photo/ice-river-photography-300857/
-prague_czechia.jpg - Photo by Jeffrey Czum from Pexels: https://www.pexels.com/photo/red-tram-passing-between-concrete-buildings-2346216/
-paris_france.jpg - Photo by Guillaume Meurice from Pexels: https://www.pexels.com/photo/low-angle-photography-of-eiffel-tower-2728793/
-gablenz_germany.jpg - Photo by Martin Damboldt from Pexels: https://www.pexels.com/photo/gray-bridge-and-trees-814499/
-greece.jpg - Photo by Pixabay from Pexels: https://www.pexels.com/photo/landscape-view-of-greece-during-day-time-161815/
-roma_lazio_italy.jpg - Photo by Julius Silver from Pexels: https://www.pexels.com/photo/photography-of-lighted-bridge-753639/
-duluth_mn_united_states.jpg - Photo by Josh Hild from Pexels: https://www.pexels.com/photo/white-wooden-bench-near-trees-during-sunset-13972464/
-glendo_wy_united_states.jpg - Photo by Brent McQuery from Pexels: https://www.pexels.com/photo/silhouette-of-trees-by-the-lake-during-sunset-16463129/
-bow_bridge_new_york.jpg - Photo by Marta Wave from Pexels: https://www.pexels.com/photo/bow-bridge-crossing-calm-lake-in-autumn-park-5876663/
-ottawa_on_canada.jpg - Photo by Tetyana Kovyrina from Pexels: https://www.pexels.com/photo/photo-of-beige-and-green-castle-1045915/
-san_francisco.jpg - Photo by Clément Proust from Pexels: https://www.pexels.com/photo/une-rue-dans-san-fransico-17763539/
-north_bondi_nsw_australia.jpg - Photo by Larry Snickers from Pexels: https://www.pexels.com/photo/aerial-photo-of-bondi-beach-2607832/
-bondi_beach_nsw_australia.jpg" - Photo by Larry Snickers from Pexels: https://www.pexels.com/photo/bird-s-eye-view-of-cropland-during-daytime-3071758/
-sydney_australia.jpg - Photo by Rijan Hamidovic from Pexels: https://www.pexels.com/photo/harbour-bridge-australia-1680247/
-moorea_maiao_windward_islands,\_french_polynesia.jpg - Photo by Thomas balabaud from Pexels: https://www.pexels.com/photo/white-clouds-above-mount-rotui-5034190/
-apia_upolu_samoa.jpg - Photo by Eric Seddon from Pexels: https://www.pexels.com/photo/beach-life-apia-17131058/
-magallanes_and_chilean_antarctica_chile.jpg - Photo by Tom D'Arby from Pexels: https://www.pexels.com/photo/gray-rocky-mountain-under-the-blue-sky-7541745/
-guatapé_antioquia_colombia.jpg - Photo by Daniel Guti from Pexels: https://www.pexels.com/photo/white-clouds-above-the-town-of-guatape-in-colombia-11358098/
-medellín_antioquia_colombia.jpg - Photo by Clive Kim from Pexels: https://www.pexels.com/photo/aerial-view-of-city-during-night-time-4150032/
-puno_peru.jpg - Photo by João Aguiar from Pexels: https://www.pexels.com/photo/brown-wooden-boat-on-water-7777886/
-punta_del_este_maldonado_department_uruguay.jpg - Photo by Pedro Slinger from Pexels: https://www.pexels.com/photo/bird-s-eye-view-of-the-city-of-punta-del-este-10917277/
+- [girl.jpg](https://www.pexels.com/photo/freckled-face-3763188/) - Photo by Andrea Piacquadio from Pexels
+- [guy.jpg](https://www.pexels.com/photo/man-in-red-jacket-1681010/) - Photo by Creation Hill from Pexels
+- [landscape-blur.jpg](https://www.pexels.com/photo/mirror-lake-reflecting-wooden-house-in-middle-of-lake-overlooking-mountain-ranges-147411/) - Photo by Pixabay from Pexels
+- [mountains.jpg](https://www.pexels.com/photo/stars-on-clear-night-sky-in-dolomites-17803932/) - Photo by Marco Milanesi from Pexels
+- [plane-departure3-blurred.jpg](https://www.pexels.com/photo/window-view-of-airplane-615060/) - Photo by Christine Renard from Pexels
+- [world.jpg](https://www.pexels.com/photo/black-textile-41949/) - Photo by Pixabay from Pexels
+- [al_wahat_al_dakhla_desert_new_valley_governorate_egypt.jpg](https://www.pexels.com/photo/photo-of-camels-on-dessert-3889891/) - Photo by Taryn Elliott from Pexels
+- [chefchaouen_tangier-tétouan-al_hoceima_morocco.jpg](https://www.pexels.com/photo/narrow-alley-3061496/) - Photo by Mark Neal from Pexels
+- [cape_town_wc_south_africa.jpg](https://www.pexels.com/photo/person-standing-across-body-of-water-2327413/) - Photo by Arthur Brognoli from Pexels
+- [mpumalanga_kzn_south_africa.jpg](https://www.pexels.com/photo/photo-of-waterfalls-during-daytime-3889927/) - Photo by Taryn Elliott from Pexels
+- [tanzania.jpg](https://www.pexels.com/photo/photo-of-dirt-road-across-hill-under-cloudy-sky-3581847/) - Photo by Pepe Caspers from Pexels
+- [gazibo.jpg](https://www.pexels.com/photo/asian-style-gazebo-near-plants-1660891/) - Photo by Loifotos from Pexels
+- [tokyo_japan.jpg](https://www.pexels.com/photo/beige-and-brown-temple-2758567/) - Photo by Sunil Poudel from Pexels
+- [incheon_south_korea.jpg](https://www.pexels.com/photo/brown-and-red-wooden-house-3405486/) - Photo by Harry Cunningham @harry.digital from Pexels
+- [thailand.jpg](https://www.pexels.com/photo/woman-wearing-blue-dress-with-umbrella-during-sunset-2070485/) - Photo by Oleksandr P from Pexels
+- [dong_da_ha_noi_vietnam.jpg](https://www.pexels.com/photo/people-sitting-on-sidewalk-1483778/) - Photo by Flo Dahm from Pexels
+- [landscape-focus-blur](https://www.pexels.com/photo/ice-river-photography-300857/) - Photo by Riccardo from Pexels
+- [prague_czechia.jpg](https://www.pexels.com/photo/red-tram-passing-between-concrete-buildings-2346216/) - Photo by Jeffrey Czum from Pexels
+- [paris_france.jpg](https://www.pexels.com/photo/low-angle-photography-of-eiffel-tower-2728793/) - Photo by Guillaume Meurice from Pexels
+- [gablenz_germany.jpg](https://www.pexels.com/photo/gray-bridge-and-trees-814499/) - Photo by Martin Damboldt from Pexels
+- [greece.jpg](https://www.pexels.com/photo/landscape-view-of-greece-during-day-time-161815/) - Photo by Pixabay from Pexels
+- [roma_lazio_italy.jpg](https://www.pexels.com/photo/photography-of-lighted-bridge-753639/) - Photo by Julius Silver from Pexels
+- [duluth_mn_united_states.jpg](https://www.pexels.com/photo/white-wooden-bench-near-trees-during-sunset-13972464/) - Photo by Josh Hild from Pexels
+- [glendo_wy_united_states.jpg](https://www.pexels.com/photo/silhouette-of-trees-by-the-lake-during-sunset-16463129/) - Photo by Brent McQuery from Pexels
+- [bow_bridge_new_york.jpg](https://www.pexels.com/photo/bow-bridge-crossing-calm-lake-in-autumn-park-5876663/) - Photo by Marta Wave from Pexels
+- [ottawa_on_canada.jpg](https://www.pexels.com/photo/photo-of-beige-and-green-castle-1045915/) - Photo by Tetyana Kovyrina from Pexels
+- [san_francisco.jpg](https://www.pexels.com/photo/une-rue-dans-san-fransico-17763539/) - Photo by Clément Proust from Pexels
+- [north_bondi_nsw_australia.jpg](https://www.pexels.com/photo/aerial-photo-of-bondi-beach-2607832/) - Photo by Larry Snickers from Pexels
+- [bondi_beach_nsw_australia.jpg](https://www.pexels.com/photo/bird-s-eye-view-of-cropland-during-daytime-3071758/) - Photo by Larry Snickers from Pexels
+- [sydney_australia.jpg](https://www.pexels.com/photo/harbour-bridge-australia-1680247/) - Photo by Rijan Hamidovic from Pexels
+- [moorea_maiao_windward_islands,\_french_polynesia.jpg](https://www.pexels.com/photo/white-clouds-above-mount-rotui-5034190/) - Photo by Thomas balabaud from Pexels
+- [apia_upolu_samoa.jpg](https://www.pexels.com/photo/beach-life-apia-17131058/) - Photo by Eric Seddon from Pexels
+- [magallanes_and_chilean_antarctica_chile.jpg](https://www.pexels.com/photo/gray-rocky-mountain-under-the-blue-sky-7541745/) - Photo by Tom D'Arby from Pexels
+- [guatapé_antioquia_colombia.jpg](https://www.pexels.com/photo/white-clouds-above-the-town-of-guatape-in-colombia-11358098/) - Photo by Daniel Guti from Pexels
+- [medellín_antioquia_colombia.jpg](https://www.pexels.com/photo/aerial-view-of-city-during-night-time-4150032/) - Photo by Clive Kim from Pexels
+- [puno_peru.jpg](https://www.pexels.com/photo/brown-wooden-boat-on-water-7777886/) - Photo by João Aguiar from Pexels
+- [punta_del_este_maldonado_department_uruguay.jpg](https://www.pexels.com/photo/bird-s-eye-view-of-the-city-of-punta-del-este-10917277/) - Photo by Pedro Slinger from Pexels
 
 ## What it doesn't include
 
